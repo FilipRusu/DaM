@@ -44,9 +44,9 @@ public class Ejercicio4 {
 
 		src.close();
 	}
-	
+
 	public static void hola() {
-		
+
 	}
 
 }
