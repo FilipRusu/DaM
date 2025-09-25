@@ -2,7 +2,7 @@ package ej3OBj;
 
 import java.io.Serializable;
 
-public class Fecha implements Serializable {
+public class Fecha  implements Serializable{
 	int dia;
 	int mes;
 	int año;
