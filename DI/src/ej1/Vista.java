@@ -72,6 +72,8 @@ public class Vista extends JFrame{
 			}
 		});
 	
+		setVisible(true);
+		setResizable(false);
 	}
 
 }
