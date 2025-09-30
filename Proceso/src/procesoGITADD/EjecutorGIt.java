@@ -9,7 +9,7 @@ public class EjecutorGIt {
 		ProcessBuilder pb = new ProcessBuilder("git","add",".");
 		pb.directory(f);
 		
-		ProcessBuilder pb1 = new ProcessBuilder("git","commit","-m","\"$(date +%x)\"");
+		ProcessBuilder pb1 = new ProcessBuilder("git","commit","-m","$(date +%x)");
 		pb.directory(f);
 		
 		ProcessBuilder pb2 = new ProcessBuilder("git","push","-u","origin","master");
