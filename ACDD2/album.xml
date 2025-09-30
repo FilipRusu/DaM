@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Album anio="2010">
+    <artista>Don Toliver</artista>
+    <canciones>
+        <cancion extra="true">
+            <titulo>X5</titulo>
+            <duracion>45</duracion>
+        </cancion>
+        <cancion extra="false">
+            <titulo>2AM</titulo>
+            <duracion>34</duracion>
+        </cancion>
+    </canciones>
+    <nombre>Life of a DON</nombre>
+</Album>

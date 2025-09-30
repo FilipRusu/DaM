@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<empresa>
+    <cif>222222</cif>
+    <empleados>
+        <empleados>
+            <dni>Y543988B</dni>
+            <nombre>Andres</nombre>
+            <edad>20</edad>
+            <cargo nivel="2">Ingeniero</cargo>
+        </empleados>
+        <empleados>
+            <dni>43988B</dni>
+            <nombre>AAAAAndres</nombre>
+            <edad>20</edad>
+        </empleados>
+    </empleados>
+    <nombre>Filip.SL</nombre>
+</empresa>
