@@ -43,7 +43,7 @@ public class Vista extends JFrame{
 		getContentPane().add(textField_1);
 		
 		JButton btnCancelar = new JButton("cancelar");
-		btnCancelar.setBounds(272, 186, 117, 25);
+		btnCancelar.setBounds(242, 116, 117, 25);
 		getContentPane().add(btnCancelar);
 		btnCancelar.addActionListener(new ActionListener() {
 			
@@ -56,15 +56,18 @@ public class Vista extends JFrame{
 			}
 		});
 		JButton btnAcceptar = new JButton("acceptar");
-		btnAcceptar.setBounds(45, 186, 117, 25);
+		btnAcceptar.setBounds(42, 116, 117, 25);
 		getContentPane().add(btnAcceptar);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(12, 168, 424, 85);
+		getContentPane().add(textPane);
 		btnAcceptar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(textField_1.getText().equalsIgnoreCase("Aloha1234")) {
-					JOptionPane.showMessageDialog(null, "CORRECTO");
-					
+					textPane.setText("CORRECTO");
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "INCORRECTO");
@@ -75,5 +78,8 @@ public class Vista extends JFrame{
 		setVisible(true);
 		setResizable(false);
 	}
-
+	
+	public static void main(String[] args) {
+		Vista v = new Vista();
+	}
 }
