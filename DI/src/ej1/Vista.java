@@ -5,7 +5,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -66,12 +70,18 @@ public class Vista extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				StyledDocument doc = textPane.getStyledDocument();
+				SimpleAttributeSet color = new SimpleAttributeSet();
 				if(textField_1.getText().equalsIgnoreCase("Aloha1234")) {
+					
 					textPane.setText("CORRECTO");
+					StyleConstants.setForeground(color, Color.GREEN);
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "INCORRECTO");
+					textPane.setText("INCORRECTO");
+					StyleConstants.setForeground(color, Color.RED);
 				}
+				doc.setCharacterAttributes(0, doc.getLength(), color, false);
 			}
 		});
 	
