@@ -43,5 +43,10 @@ public class Cancion {
 		this.extra = extra;
 	}
 
+	@Override
+	public String toString() {
+		return "Cancion [titulo=" + titulo + ", duracion=" + duracion + ", extra=" + extra + "]";
+	}
+	
 
 }

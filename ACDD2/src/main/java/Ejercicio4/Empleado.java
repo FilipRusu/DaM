@@ -49,6 +49,11 @@ public class Empleado {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+
+	@Override
+	public String toString() {
+		return "dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + ", cargo=" + cargo;
+	}
 	
 	
 	

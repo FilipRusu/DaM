@@ -30,6 +30,10 @@ public class Cargo {
 	public void setValor(String valor) {
 		this.valor = valor;
 	}
+	@Override
+	public String toString() {
+		return "nivel=" + nivel + ", valor=" + valor;
+	}
 	
 	
 	
