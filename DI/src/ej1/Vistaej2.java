@@ -16,12 +16,13 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import javax.swing.JTextPane;
+import javax.swing.JPasswordField;
 
 public class Vistaej2 extends JFrame{
 
 	private static final long serialVersionUID = 1L;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField passwordField;
+	private JPasswordField passwordField_1;
 	
 	public Vistaej2() {
 		
@@ -37,11 +38,6 @@ public class Vistaej2 extends JFrame{
 		lblIngreseNombreDe.setBounds(161, 22, 98, 15);
 		getContentPane().add(lblIngreseNombreDe);
 		
-		textField = new JTextField();
-		textField.setBounds(105, 49, 217, 19);
-		getContentPane().add(textField);
-		textField.setColumns(10);
-		
 		
 		
 		JLabel lblIngreseLaContrasea = new JLabel("Repita contraseña");
@@ -50,11 +46,6 @@ public class Vistaej2 extends JFrame{
 		lblIngreseLaContrasea.setFont(UIManager.getFont("ColorChooser.font"));
 		lblIngreseLaContrasea.setBounds(148, 95, 156, 15);
 		getContentPane().add(lblIngreseLaContrasea);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(105, 116, 217, 19);
-		getContentPane().add(textField_1);
 		
 		
 		
@@ -65,18 +56,36 @@ public class Vistaej2 extends JFrame{
 		JTextPane textPane = new JTextPane();
 		textPane.setBounds(35, 185, 394, 71);
 		getContentPane().add(textPane);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(130, 49, 148, 25);
+		getContentPane().add(passwordField);
+		
+		passwordField_1 = new JPasswordField();
+		passwordField_1.setBounds(130, 122, 148, 25);
+		getContentPane().add(passwordField_1);
 		btnAcceptar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				StyledDocument doc = textPane.getStyledDocument();
 				SimpleAttributeSet color = new SimpleAttributeSet();
-				if(textField_1.getText().length()<8 || textField.getText().length()<0) {
-					textPane.setText("ERROR: contraseña corta:");
+			char[] passchar= passwordField.getPassword();
+			String password1= new String(passchar);
+			passchar = passwordField_1.getPassword();
+			String password2= new String(passchar);
+				
+				
+				if(password1.length()<1 || password2.length()<1) {
+					textPane.setText("ERROR:campos vacios");
 					StyleConstants.setForeground(color, Color.RED);
 				}
-				else if(!textField.getText().equals(textField_1.getText())) {
-					textPane.setText("ERROR: contraseñas no coinciden:");
+				else if(password1.length()<8 || password2.length()<8) {
+					textPane.setText("ERROR: contraseña corta");
+					StyleConstants.setForeground(color, Color.RED);
+				}
+				else if(!password1.equalsIgnoreCase(password2)) {
+					textPane.setText("ERROR: contraseñas no coinciden");
 					StyleConstants.setForeground(color, Color.RED);
 				}
 				else {	
@@ -84,7 +93,7 @@ public class Vistaej2 extends JFrame{
 					StyleConstants.setForeground(color, Color.GREEN);
 					
 				}
-				
+				doc.setCharacterAttributes(0, doc.getLength(), color, false);
 			}
 		});
 	

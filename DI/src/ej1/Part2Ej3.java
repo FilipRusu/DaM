@@ -18,6 +18,7 @@ import javax.swing.GroupLayout.Group;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import javax.swing.JToggleButton;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.JScrollBar;
 import javax.swing.JSeparator;
 import javax.swing.JSlider;
@@ -109,8 +110,8 @@ public class Part2Ej3 extends JFrame{
 			}
 		});
 		scrollPane.setViewportView(list);
-		
-		JSpinner spinner = new JSpinner();
+		SpinnerNumberModel model = new SpinnerNumberModel(0, 0, 10, 1);
+		JSpinner spinner = new JSpinner(model);
 		spinner.setBounds(99, 47, 29, 20);
 		getContentPane().add(spinner);
 		
@@ -156,11 +157,18 @@ public class Part2Ej3 extends JFrame{
 				if(textField.getText().length()<1) {
 					JOptionPane.showMessageDialog(null, "INCORRECTO-->Introduzca una profesion");
 				}
-				else if(!rdbtnNewRadioButton.isSelected() || !rdbtnFemina.isSelected()) {
+				else if(!rdbtnNewRadioButton.isSelected() && !rdbtnFemina.isSelected()) {
 					JOptionPane.showMessageDialog(null, "INCORRECTO-->Elija un genero");
+				}
+				else if(!chckbxNewCheckBox.isSelected()) {
+					JOptionPane.showMessageDialog(null, "INCORRECTO-->Seleccione la casilla del deporte");
+				}
+				else if(list.getSelectedValue()==null) {
+					JOptionPane.showMessageDialog(null, "INCORRECTO-->Elija un deporte");
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "CORRECTO-->La encuesta se ha guardado con exito");
+					setVisible(false);
 				}
 				
 			}
@@ -169,6 +177,15 @@ public class Part2Ej3 extends JFrame{
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(282, 684, 117, 25);
 		getContentPane().add(btnCancelar);
+		btnCancelar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				
+			}
+		});
+		
 		
 		setVisible(true);
 		setResizable(false);
