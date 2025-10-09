@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<concesionario>
+    <vehiculos precio="20000.0">
+        <vehiculos>
+            <año>2000</año>
+            <modelo>Urus</modelo>
+            <marca>Lamborghini</marca>
+            <vendedor>Nixon</vendedor>
+        </vehiculos>
+        <vehiculos>
+            <año>2000</año>
+            <modelo>Urus</modelo>
+            <marca>Lamborghini</marca>
+            <vendedor>Nixon</vendedor>
+        </vehiculos>
+    </vehiculos>
+</concesionario>

@@ -26,6 +26,7 @@ public class ProgramaLectura {
 		System.out.println("Artista:"+album.getArtista()+" Año album:"+album.getAnio()+" Nombre:"+album.getNombre());
 		for (Cancion cancion2 : cancion) {
 			System.out.println(cancion2);
+		
 		}
 		
 		
