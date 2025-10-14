@@ -47,13 +47,13 @@ public class App extends JFrame {
 		getContentPane().add(textPane);
 
 		JComboBox comboEuros = new JComboBox();
-		comboEuros.setModel(new DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5" }));
+		comboEuros.setModel(new DefaultComboBoxModel(new Integer[] { 0,1,2,3, 4, 5}));
 		comboEuros.setBounds(342, 19, 94, 23);
 		getContentPane().add(comboEuros);
 
 		JComboBox comboCentimos = new JComboBox();
 		comboCentimos.setModel(
-				new DefaultComboBoxModel(new String[] { "0", "10", "20", "30", "40", "50", "60", "70", "80", "90" }));
+				new DefaultComboBoxModel(new Double[] { 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }));
 		comboCentimos.setBounds(342, 75, 94, 23);
 		getContentPane().add(comboCentimos);
 
@@ -66,58 +66,50 @@ public class App extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				StyledDocument doc = textPane.getStyledDocument();
 				SimpleAttributeSet color = new SimpleAttributeSet();
-				double euros = Double.parseDouble(comboEuros.getSelectedItem().toString())
-						+ (Integer.parseInt(comboCentimos.getSelectedItem().toString()) / 100);
-				double salida = 0;
-
+				int nr1 = (int) comboEuros.getSelectedItem();
+				double nr2=(double) comboCentimos.getSelectedItem();
+				double suma=nr1+nr2;
+				double bebidaA=0.80;
+				double bebidaB=1.20;
+				double bebidaC=3.10;
+				
 				if (rdbtnA.isSelected()) {
-					if (euros == 0.80) {
-						textPane.setText("CORRECTO: BEBIDA A EXTRAIDA");
-						StyleConstants.setForeground(color, Color.GREEN);
-					} else if (euros > 0.80) {
-						salida = euros - 0.80;
-						textPane.setText("CORRECTO: BEBIDA A EXTRAIDA TE SOBRAN: " + salida);
-						StyleConstants.setForeground(color, Color.GREEN);
-					} else {
-						salida = 0.80 - euros;
-						textPane.setText("INCORRECTO: EL PRECIO DE LA BEBIDA ES 0,80€ TE FALTAN " + salida);
-						StyleConstants.setForeground(color, Color.RED);
+					if (suma == bebidaA) {
+						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						textPane.setText("CORRECTO:EXPULSANDO BEBIDA");
+					}else if(suma > bebidaA){
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("SOBRAN: "+(suma - bebidaA));
+					}else {
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("FALTAN: " + (bebidaA - suma));
 					}
 				}
 
 				else if (rdbtnB.isSelected()) {
-					if (euros == 1.20) {
-						textPane.setText("CORRECTO: BEBIDA B EXTRAIDA");
-						StyleConstants.setForeground(color, Color.GREEN);
-					} 
-					else if(euros>1.20){
-						salida=euros-1.20;
-						textPane.setText("CORRECTO: BEBIDA B EXTRAIDA TE SOBRAN: "+salida);
-						StyleConstants.setForeground(color, Color.GREEN);
+					if(suma == bebidaB) {
+						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						textPane.setText("CORRECTO:EXULSANDO BEBIDA");
+					}else if(suma > bebidaB){
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("SOBRAN: " + (suma - bebidaB));
+					}else {
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("FALTAN: " + (bebidaB - suma));
 					}
-					else {
-						salida=1.20-euros;
-						textPane.setText("INCORRECTO: EL PRECIO DE LA BEBIDA ES 1,20€ TE FALTAN"+salida);
-						StyleConstants.setForeground(color, Color.RED);
-					}
-				}
-
+				}	
 				else if (rdbtnC.isSelected()) {
-					if (euros == 3.10) {
-						textPane.setText("CORRECTO: BEBIDA C EXTRAIDA");
-						StyleConstants.setForeground(color, Color.GREEN);
-					} 
-					else if(euros>3.10){
-						salida=euros-3.10;
-						textPane.setText("CORRECTO: BEBIDA C EXTRAIDA TE SOBRAN: "+salida);
-						StyleConstants.setForeground(color, Color.GREEN);
+					if (suma == bebidaC) {
+						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						textPane.setText("CORRECTO: EXPULSANDO BEBIDA");
+					}else if (suma > bebidaC){
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("SOBRAN: " + (suma - bebidaC));
+					}else {
+						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						textPane.setText("FALTAN: " + (bebidaC - suma));
 					}
-					else {
-						salida=3.10-euros;
-						textPane.setText("INCORRECTO: EL PRECIO DE LA BEBIDA ES 3,10€ TE FALTAN "+salida);
-						StyleConstants.setForeground(color, Color.RED);
-						
-					}
+					
 				} else {
 					textPane.setText("NO SE HA SELECIONADO NINGUNA BEBIDA!");
 					StyleConstants.setForeground(color, Color.RED);

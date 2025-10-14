@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView contadorDeClics;
     Button augmentarElContador;
 
-
+    String textinfo;
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 contador++;
-                contadorDeClics.setText("Has clicado "+contador +" veces");
+            textinfo =getString(R.string.click_counts,contador);
+            contadorDeClics.setText(textinfo);
             }
         });
 
