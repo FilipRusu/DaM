@@ -75,38 +75,38 @@ public class App extends JFrame {
 				
 				if (rdbtnA.isSelected()) {
 					if (suma == bebidaA) {
-						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						StyleConstants.setForeground(color, Color.GREEN);
 						textPane.setText("CORRECTO:EXPULSANDO BEBIDA");
 					}else if(suma > bebidaA){
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
-						textPane.setText("SOBRAN: "+(suma - bebidaA));
+						StyleConstants.setForeground(color, Color.GREEN); 
+						textPane.setText("CORRECTO SOBRAN: " + (suma - bebidaA));
 					}else {
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						StyleConstants.setForeground(color, Color.RED); 
 						textPane.setText("FALTAN: " + (bebidaA - suma));
 					}
 				}
 
 				else if (rdbtnB.isSelected()) {
 					if(suma == bebidaB) {
-						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						StyleConstants.setForeground(color, Color.GREEN); 
 						textPane.setText("CORRECTO:EXULSANDO BEBIDA");
 					}else if(suma > bebidaB){
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
-						textPane.setText("SOBRAN: " + (suma - bebidaB));
+						StyleConstants.setForeground(color, Color.GREEN); 
+						textPane.setText("CORRECTO SOBRAN: " + (suma - bebidaB));
 					}else {
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						StyleConstants.setForeground(color, Color.RED); 
 						textPane.setText("FALTAN: " + (bebidaB - suma));
 					}
 				}	
 				else if (rdbtnC.isSelected()) {
 					if (suma == bebidaC) {
-						StyleConstants.setForeground(color, Color.GREEN); // Cambia a color verde
+						StyleConstants.setForeground(color, Color.GREEN); 
 						textPane.setText("CORRECTO: EXPULSANDO BEBIDA");
 					}else if (suma > bebidaC){
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
-						textPane.setText("SOBRAN: " + (suma - bebidaC));
+						StyleConstants.setForeground(color, Color.GREEN); 
+						textPane.setText("CORRECTO SOBRAN: " + (suma - bebidaC));
 					}else {
-						StyleConstants.setForeground(color, Color.RED); // Cambia a color rojo
+						StyleConstants.setForeground(color, Color.RED); 
 						textPane.setText("FALTAN: " + (bebidaC - suma));
 					}
 					
