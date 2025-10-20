@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<concesionario nombre="FILIPS COCHES">
+    <vehiculos>
+        <vehiculos precio="4000.0">
+            <anio>2002</anio>
+            <marca>SEAT</marca>
+            <modelo>Leon</modelo>
+            <vendedor>Andres</vendedor>
+        </vehiculos>
+        <vehiculos precio="4000.0">
+            <anio>2002</anio>
+            <marca>AAAAA</marca>
+            <modelo>AAAA</modelo>
+            <vendedor>AAAAAA</vendedor>
+        </vehiculos>
+    </vehiculos>
+    <ubicacion>calle de benimamet 26</ubicacion>
+</concesionario>
