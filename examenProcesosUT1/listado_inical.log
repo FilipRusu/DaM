@@ -1,0 +1,5 @@
+total 8
+drwxr-xr-x 3 vespertino vespertino 4096 oct 15 17:35 bin
+-rw-r--r-- 1 vespertino vespertino    0 oct 15 18:25 listado_inical.log
+-rw-r--r-- 1 vespertino vespertino    0 oct 15 18:25 log_errores.eer
+drwxr-xr-x 3 vespertino vespertino 4096 oct 15 17:35 src

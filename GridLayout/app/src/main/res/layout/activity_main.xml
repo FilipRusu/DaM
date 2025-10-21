@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:columnCount="20"
+    app:rowCount="20"
+    android:padding="8dp"
+    app:orientation="horizontal"
+    tools:ignore="ExtraText">
+
+<Button
+    android:text="b8"
+    app:layout_row="0"
+    app:layout_column="0"
+    />
+
+
+</androidx.gridlayout.widget.GridLayout>
+
