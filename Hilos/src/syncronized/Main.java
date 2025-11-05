@@ -9,7 +9,6 @@ public class Main {
 	HiloRestar h2= new HiloRestar(c, 8, 9);
 	Thread t1= new Thread(h1);
 	Thread t2 = new Thread(h2);
-	
 	t2.start();
 	t1.start();
 	}
