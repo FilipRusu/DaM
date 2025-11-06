@@ -1,4 +1,4 @@
-package pr5;
+package Vista;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,12 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class MostrarReservas extends JFrame {
-
-	static Connection connection = null;
-	static Statement st = null;
-	static ResultSet rs = null;
-
-	public MostrarReservas(Connection connection) {
+	
+	
+	public MostrarReservas() {
 		setTitle("Reservas");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,8 +21,14 @@ public class MostrarReservas extends JFrame {
 		textArea.setBounds(10, 11, 764, 639);
 		getContentPane().add(textArea);
 		setResizable(false);
-
+		
+	
 	}
-
+	private void mostrarReservas() {
+		
+	}
+	
+	
+	
 	private static final long serialVersionUID = 1L;
 }

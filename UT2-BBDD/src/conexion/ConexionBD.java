@@ -1,11 +1,13 @@
 package conexion;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 
 public class ConexionBD {
 
@@ -17,7 +19,7 @@ public class ConexionBD {
 	static Statement st = null;
 	static ResultSet rs = null;
 	static PreparedStatement pt = null;
-
+	static CallableStatement cs = null;
 	public static void listarAutores() throws SQLException {
 		st = connection.createStatement();
 		rs = st.executeQuery("select ID_LECTOR,NOMBRE,EMAIL from lectores");
@@ -103,6 +105,53 @@ public class ConexionBD {
 	
 	}
 	
+	public static void procesarDevolucion() throws SQLException{
+		cs = connection.prepareCall("{call REGISTRAR_DEVOLUCION(?,?)}");
+		cs.registerOutParameter(2,Types.VARCHAR);
+		cs.setInt(1,2);
+		cs.execute();
+		
+		System.out.println("Nombre:"+cs.getString(2));
+	}
+	
+	public static void aplicarMulta(int idLector,double montoAdicional) throws SQLException{
+		cs=connection.prepareCall("{call ACTUALIZAR_MULTA_INOUT(?,?)}");
+		cs.setInt(1, idLector);
+		
+		cs.registerOutParameter(2, Types.DOUBLE);
+		cs.setDouble(2, montoAdicional);
+		
+		cs.execute();
+		
+		System.out.println("Nueva multa:"+cs.getDouble(2));
+		
+	}
+	
+	public static void registrarPrestamoSeguro(int idLector,String isbn) throws SQLException{
+		try {
+			connection.setAutoCommit(false);
+			registraraNuevoAutorPS(idLector,"Andres" ,"Peruano");
+
+			connection.commit();
+		} catch (Exception e) {
+			connection.rollback();
+		}
+
+		
+		
+		
+	}
+	
+	public static void obtenerMulta(int idLector) throws SQLException{
+		cs=connection.prepareCall("? = call  CALCULAR_MULTA_LECTOR(?)");
+		cs.registerOutParameter(1, Types.DOUBLE);
+		cs.setInt(2, idLector);
+		
+		cs.execute();
+		
+		System.out.println("Resultado"+cs.getDouble(1));
+		
+	}
 	
 	
 	public static void connectar() {
@@ -129,17 +178,21 @@ public class ConexionBD {
 		if (pt != null) {
 			pt.close();
 		}
+		if(cs!=null) {
+			cs.close();
+		}
 		if (connection != null) {
 			connection.close();
 		}
 		System.out.println("Conexion acabada");
 	}
+	
 
 	public static void main(String[] args) {
 
 		connectar();
 		try {
-			listarLibrosDeAutor("Jane Austen");
+			obtenerMulta(2002);
 			cerrar();
 		} catch (Exception e) {
 			e.printStackTrace();

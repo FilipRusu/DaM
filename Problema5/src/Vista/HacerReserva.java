@@ -1,4 +1,4 @@
-package pr5;
+package Vista;
 
 import javax.swing.JFrame;
 
@@ -15,10 +15,12 @@ import javax.swing.JButton;
 public class HacerReserva extends JFrame {
 	private static String user = "admin";
 	private static String password = "cobaiul4666";
-	private static String url = "jdbc:mysql://dbinterfaces.c7oqggma6c0z.us-east-1.rds.amazonaws.com:3306/interfaces";	static Connection connection = null;
+	private static String url = "jdbc:mysql://dbinterfaces.c7oqggma6c0z.us-east-1.rds.amazonaws.com:3306/interfaces";
+	static Connection connection =null;
 	static Statement st = null;
 	static ResultSet rs = null;
-
+	
+	
 	public static void connectar() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,13 +28,14 @@ public class HacerReserva extends JFrame {
 			if (connection != null) {
 				System.out.println("Conexion realizada correctamente");
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 	}
-
+	
+		
+	
 	public static void cerrar() throws SQLException {
 		if (rs != null) {
 			rs.close();
@@ -74,13 +77,16 @@ public class HacerReserva extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
+		
 		try {
-			connectar();
-			HacerReserva hacerReserva = new HacerReserva();
+			HacerReserva r= new HacerReserva();
 		} catch (Exception e) {
-
+			// TODO: handle exception
 		}
 
+		
+		
 	}
+	
 }

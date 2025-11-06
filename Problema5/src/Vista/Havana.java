@@ -1,4 +1,4 @@
-package pr5;
+package Vista;
 
 import java.sql.*;
 import javax.swing.*;
@@ -44,8 +44,8 @@ public class Havana extends JFrame {
 	private final int ANCHO_MARCO = 550;
 	private final int ALTO_MARCO = 500;
 
-	public Havana(Connection connection) {
-		connection = connection;
+	public Havana(Connection conn) {
+		connection = conn;
 		setTitle("Reserva - Hotel Havana");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(ANCHO_MARCO, ALTO_MARCO);
@@ -56,7 +56,21 @@ public class Havana extends JFrame {
 		inicializarComponentes();
 		configurarAcciones();
 	}
+	private void agregarReserva() throws SQLException {
+		String sql="insert into reservas(nombre,telefono,fecha,numero_personas,tipo_reserva,tipo_cocina,n_dias,requiere_habitacion) values (?,?,?,?,?,?,?,?)";
+		PreparedStatement ps=connection.prepareStatement(sql);
+		
+				
+		
+		
+		
+		
+		
+		
 
+		
+	}
+	
 	private boolean validarEntradas() {
 
 		String nombre = txtNombre.getText().trim();
@@ -172,6 +186,7 @@ public class Havana extends JFrame {
 
 		btnAceptar.addActionListener(e -> {
 			if (validarEntradas()) {
+				
 				JOptionPane.showMessageDialog(this, "✅ Reserva Aceptada con Éxito. Todos los datos son válidos.",
 						"Éxito", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -307,10 +322,228 @@ public class Havana extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
-				MostrarReservas mr = new MostrarReservas(connection);
+				MostrarReservas mr = new MostrarReservas();
 				mr.setVisible(true);
 			}
 		});
 
 	}
+
+	public JButton getBtnAceptar() {
+		return btnAceptar;
+	}
+
+	public void setBtnAceptar(JButton btnAceptar) {
+		this.btnAceptar = btnAceptar;
+	}
+
+	public JButton getBtnCancelar() {
+		return btnCancelar;
+	}
+
+	public void setBtnCancelar(JButton btnCancelar) {
+		this.btnCancelar = btnCancelar;
+	}
+
+	public static Connection getConnection() {
+		return connection;
+	}
+
+	public static void setConnection(Connection connection) {
+		Havana.connection = connection;
+	}
+
+	public static Statement getSt() {
+		return st;
+	}
+
+	public static void setSt(Statement st) {
+		Havana.st = st;
+	}
+
+	public static ResultSet getRs() {
+		return rs;
+	}
+
+	public static void setRs(ResultSet rs) {
+		Havana.rs = rs;
+	}
+
+	public JCheckBox getChkRequiereHabitaciones() {
+		return chkRequiereHabitaciones;
+	}
+
+	public void setChkRequiereHabitaciones(JCheckBox chkRequiereHabitaciones) {
+		this.chkRequiereHabitaciones = chkRequiereHabitaciones;
+	}
+
+	public JComboBox<String> getCmbTipoCocina() {
+		return cmbTipoCocina;
+	}
+
+	public void setCmbTipoCocina(JComboBox<String> cmbTipoCocina) {
+		this.cmbTipoCocina = cmbTipoCocina;
+	}
+
+	public ButtonGroup getGrpTipoEvento() {
+		return grpTipoEvento;
+	}
+
+	public void setGrpTipoEvento(ButtonGroup grpTipoEvento) {
+		this.grpTipoEvento = grpTipoEvento;
+	}
+
+	public JLabel getLblTituloPrincipal() {
+		return lblTituloPrincipal;
+	}
+
+	public void setLblTituloPrincipal(JLabel lblTituloPrincipal) {
+		this.lblTituloPrincipal = lblTituloPrincipal;
+	}
+
+	public JLabel getLblTipoCocina() {
+		return lblTipoCocina;
+	}
+
+	public void setLblTipoCocina(JLabel lblTipoCocina) {
+		this.lblTipoCocina = lblTipoCocina;
+	}
+
+	public JLabel getLblNumeroDias() {
+		return lblNumeroDias;
+	}
+
+	public void setLblNumeroDias(JLabel lblNumeroDias) {
+		this.lblNumeroDias = lblNumeroDias;
+	}
+
+	public JLabel getLblFecha() {
+		return lblFecha;
+	}
+
+	public void setLblFecha(JLabel lblFecha) {
+		this.lblFecha = lblFecha;
+	}
+
+	public JLabel getLblNumeroPersonas() {
+		return lblNumeroPersonas;
+	}
+
+	public void setLblNumeroPersonas(JLabel lblNumeroPersonas) {
+		this.lblNumeroPersonas = lblNumeroPersonas;
+	}
+
+	public JLabel getLblNombre() {
+		return lblNombre;
+	}
+
+	public void setLblNombre(JLabel lblNombre) {
+		this.lblNombre = lblNombre;
+	}
+
+	public JLabel getLblTelefono() {
+		return lblTelefono;
+	}
+
+	public void setLblTelefono(JLabel lblTelefono) {
+		this.lblTelefono = lblTelefono;
+	}
+
+	public JPanel getPnlDatosContacto() {
+		return pnlDatosContacto;
+	}
+
+	public void setPnlDatosContacto(JPanel pnlDatosContacto) {
+		this.pnlDatosContacto = pnlDatosContacto;
+	}
+
+	public JPanel getPnlDatosReserva() {
+		return pnlDatosReserva;
+	}
+
+	public void setPnlDatosReserva(JPanel pnlDatosReserva) {
+		this.pnlDatosReserva = pnlDatosReserva;
+	}
+
+	public JPanel getPnlTipoEvento() {
+		return pnlTipoEvento;
+	}
+
+	public void setPnlTipoEvento(JPanel pnlTipoEvento) {
+		this.pnlTipoEvento = pnlTipoEvento;
+	}
+
+	public JRadioButton getRdbBanquete() {
+		return rdbBanquete;
+	}
+
+	public void setRdbBanquete(JRadioButton rdbBanquete) {
+		this.rdbBanquete = rdbBanquete;
+	}
+
+	public JRadioButton getRdbJornada() {
+		return rdbJornada;
+	}
+
+	public void setRdbJornada(JRadioButton rdbJornada) {
+		this.rdbJornada = rdbJornada;
+	}
+
+	public JRadioButton getRdbCongreso() {
+		return rdbCongreso;
+	}
+
+	public void setRdbCongreso(JRadioButton rdbCongreso) {
+		this.rdbCongreso = rdbCongreso;
+	}
+
+	public JSpinner getSpnNumeroDias() {
+		return spnNumeroDias;
+	}
+
+	public void setSpnNumeroDias(JSpinner spnNumeroDias) {
+		this.spnNumeroDias = spnNumeroDias;
+	}
+
+	public JSpinner getSpnFecha() {
+		return spnFecha;
+	}
+
+	public void setSpnFecha(JSpinner spnFecha) {
+		this.spnFecha = spnFecha;
+	}
+
+	public JTextField getTxtNumeroPersonas() {
+		return txtNumeroPersonas;
+	}
+
+	public void setTxtNumeroPersonas(JTextField txtNumeroPersonas) {
+		this.txtNumeroPersonas = txtNumeroPersonas;
+	}
+
+	public JTextField getTxtNombre() {
+		return txtNombre;
+	}
+
+	public void setTxtNombre(JTextField txtNombre) {
+		this.txtNombre = txtNombre;
+	}
+
+	public JTextField getTxtTelefono() {
+		return txtTelefono;
+	}
+
+	public void setTxtTelefono(JTextField txtTelefono) {
+		this.txtTelefono = txtTelefono;
+	}
+
+	public int getANCHO_MARCO() {
+		return ANCHO_MARCO;
+	}
+
+	public int getALTO_MARCO() {
+		return ALTO_MARCO;
+	}
+	
+	
 }
