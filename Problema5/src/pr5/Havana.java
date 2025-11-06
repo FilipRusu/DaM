@@ -1,8 +1,12 @@
 package pr5;
 
+import java.sql.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeListener;
+
 import javax.swing.AbstractAction;
 import java.util.Date;
 import java.util.Calendar;
@@ -12,6 +16,9 @@ public class Havana extends JFrame {
 
 	private JButton btnAceptar;
 	private JButton btnCancelar;
+	static Connection connection = null;
+	static Statement st = null;
+	static ResultSet rs = null;
 	private JCheckBox chkRequiereHabitaciones;
 	private JComboBox<String> cmbTipoCocina;
 	private ButtonGroup grpTipoEvento;
@@ -37,8 +44,8 @@ public class Havana extends JFrame {
 	private final int ANCHO_MARCO = 550;
 	private final int ALTO_MARCO = 500;
 
-	public Havana() {
-
+	public Havana(Connection connection) {
+		connection = connection;
 		setTitle("Reserva - Hotel Havana");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(ANCHO_MARCO, ALTO_MARCO);
@@ -101,7 +108,7 @@ public class Havana extends JFrame {
 			JOptionPane.showMessageDialog(this,
 					"La fecha de la reserva (" + df.format(fechaSeleccionada) + ") no puede ser anterior a hoy ("
 							+ df.format(fechaMinimaPermitida) + ").",
-							"Error de Validación de Fecha", JOptionPane.ERROR_MESSAGE);
+					"Error de Validación de Fecha", JOptionPane.ERROR_MESSAGE);
 			spnFecha.requestFocus();
 			return false;
 		}
@@ -201,7 +208,7 @@ public class Havana extends JFrame {
 		pnlTipoEvento = new JPanel();
 		pnlTipoEvento.setLayout(null);
 		pnlTipoEvento
-		.setBorder(BorderFactory.createTitledBorder(null, "Tipo", Font.BOLD, 0, new Font("Tahoma", 1, 12)));
+				.setBorder(BorderFactory.createTitledBorder(null, "Tipo", Font.BOLD, 0, new Font("Tahoma", 1, 12)));
 
 		rdbBanquete = new JRadioButton();
 		rdbJornada = new JRadioButton();
@@ -291,6 +298,19 @@ public class Havana extends JFrame {
 		int posicionYBotones = 430;
 		btnAceptar.setBounds(300, posicionYBotones, 100, 25);
 		btnCancelar.setBounds(410, posicionYBotones, 100, 25);
-	}
 
+		JButton btnMostrarReservas = new JButton("Mostrar Reservas");
+		btnMostrarReservas.setBounds(20, 429, 126, 25);
+		getContentPane().add(btnMostrarReservas);
+		btnMostrarReservas.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				MostrarReservas mr = new MostrarReservas(connection);
+				mr.setVisible(true);
+			}
+		});
+
+	}
 }
