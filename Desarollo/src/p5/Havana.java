@@ -1,4 +1,4 @@
-package Vista;
+package p5;
 
 import java.sql.*;
 import javax.swing.*;
@@ -56,17 +56,33 @@ public class Havana extends JFrame {
 		inicializarComponentes();
 		configurarAcciones();
 	}
+
 	private void agregarReserva() throws SQLException {
 		String sql="insert into reservas(nombre,telefono,fecha,numero_personas,tipo_reserva,tipo_cocina,n_dias,requiere_habitacion) values (?,?,?,?,?,?,?,?)";
 		PreparedStatement ps=connection.prepareStatement(sql);
+		ps.setString(1, txtNombre.getText());
+		ps.setString(2, txtTelefono.getText());
+		ps.setString(3, spnFecha.getValue().toString());
+		ps.setInt(4, Integer.parseInt(txtNumeroPersonas.getText()));		
+		if(rdbBanquete.isSelected()) {
+			ps.setString(5, "Banquete");
+		}
+		if (rdbCongreso.isSelected()) {
+			ps.setString(5, "Congreso");
+		}
+		if(rdbJornada.isSelected()) {
+			ps.setString(5, "Jornada");
+		}
+		ps.setString(6, cmbTipoCocina.getSelectedItem().toString());
+		ps.setInt(7, Integer.parseInt(spnNumeroDias.getValue().toString()));
+		if(chkRequiereHabitaciones.isSelected()) {
+			ps.setInt(8, 1);
+		}
+		else {
+			ps.setInt(8, 0);
+		}
 		
-				
-		
-		
-		
-		
-		
-		
+		ps.execute();
 
 		
 	}
@@ -169,7 +185,7 @@ public class Havana extends JFrame {
 		}
 	}
 
-	private void configurarAcciones() {
+	private void configurarAcciones(){
 		AccionCerrar accionCerrar = new AccionCerrar("Cancelar");
 		AccionDesactivarControles accionDesactivar = new AccionDesactivarControles("Desactivar");
 		AccionActivarControles accionActivar = new AccionActivarControles("Activar");
@@ -186,7 +202,12 @@ public class Havana extends JFrame {
 
 		btnAceptar.addActionListener(e -> {
 			if (validarEntradas()) {
-				
+				try {
+					agregarReserva();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				JOptionPane.showMessageDialog(this, "✅ Reserva Aceptada con Éxito. Todos los datos son válidos.",
 						"Éxito", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -322,7 +343,7 @@ public class Havana extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
-				MostrarReservas mr = new MostrarReservas();
+				MostrarReservas mr = new MostrarReservas(connection);
 				mr.setVisible(true);
 			}
 		});

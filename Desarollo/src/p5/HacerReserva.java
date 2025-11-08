@@ -1,4 +1,4 @@
-package Vista;
+package p5;
 
 import javax.swing.JFrame;
 
@@ -50,7 +50,6 @@ public class HacerReserva extends JFrame {
 	}
 
 	public HacerReserva() {
-
 		setTitle("HACER  RESERVA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 300);
@@ -75,14 +74,13 @@ public class HacerReserva extends JFrame {
 		setResizable(false);
 	}
 
-	private static final long serialVersionUID = 1L;
 
 	public static void main(String[] args) {
-		
+		connectar();
 		try {
-			HacerReserva r= new HacerReserva();
+			HacerReserva hr = new HacerReserva();
 		} catch (Exception e) {
-			// TODO: handle exception
+		e.printStackTrace();
 		}
 
 		
