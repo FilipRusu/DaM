@@ -19,7 +19,7 @@ public class Controlador {
 			}
 		}
 		else {
-			contador=0
+			contador=0;
 			System.out.println("__Todos los hilos han terminado de preparar__");
 			notifyAll();
 		}

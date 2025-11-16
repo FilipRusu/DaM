@@ -1,4 +1,5 @@
-package conexion;
+package repaso;
+
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
 
-public class ConexionBD {
+public class ConexionDB {
 
 	private static String user = "C##BIBLIOTECA";
 	private static String password = "password";
@@ -83,7 +84,7 @@ public class ConexionBD {
 	}
 
 	public static void cambiarCopiasDisponibles(String isbn, int nuevasCopias) throws SQLException {
-		pt = connection.prepareStatement("update libros set num_copias_disp=? where ISBN=?");
+		pt = connection.prepareStatement("update libros set num_copias_disp=? where ISBN=?"); 
 		pt.setString(2, isbn);
 		pt.setInt(1, nuevasCopias);
 		int filas = pt.executeUpdate();
@@ -161,7 +162,6 @@ public class ConexionBD {
 			if (connection != null) {
 				System.out.println("Conexion realizada correctamente");
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -192,7 +192,7 @@ public class ConexionBD {
 
 		connectar();
 		try {
-			obtenerMulta(2002);
+			buscarLibroPorAnio(1949);
 			cerrar();
 		} catch (Exception e) {
 			e.printStackTrace();
