@@ -2,6 +2,7 @@ package app;
 
 import java.util.Scanner;
 
+import dao.EmpleadoDAO;
 import dao.EmpleadoDAOImpl;
 import modelo.Empleado;
 import servicio.EmpleadoService;
@@ -13,8 +14,9 @@ public class MenuEmpleado {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+	
 		// 1. Inicializar el Servicio, inyectando el DAO y la SessionFactory
-		empleadoService = new EmpleadoService(new EmpleadoDAOImpl());
+		empleadoService = new EmpleadoService(new EmpleadoDAO(HibernateUtil.getSessionFactory()));
 
 		mostrarMenu();
 
@@ -85,7 +87,7 @@ public class MenuEmpleado {
 
 		try {
 			empleadoService.registrarEmpleado(e);
-			System.out.println("Empleado creado con ID: " + e.getId());
+			System.out.println("Empleado creado con ID: " + e.getIdempleado());
 		} catch (Exception ex) {
 			System.out.println("Error al crear empleado: " + ex.getMessage());
 		}
