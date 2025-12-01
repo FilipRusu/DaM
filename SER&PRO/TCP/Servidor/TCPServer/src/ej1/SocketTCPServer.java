@@ -34,12 +34,16 @@ public class SocketTCPServer {
 	public static void main(String[] args) {
 		try {
 		SocketTCPServer servidor=new SocketTCPServer(49171);
+	while(true) {
 		servidor.start();
 		String palabra=servidor.dis.readUTF();
 		String aux=palabra.toLowerCase();
-		servidor.dos.writeUTF(palabra);
+		servidor.dos.writeUTF(aux);
 		servidor.stop();
-		} catch (Exception e) {
+	}
+		
+		
+	} catch (Exception e) {
 		
 		}
 	}

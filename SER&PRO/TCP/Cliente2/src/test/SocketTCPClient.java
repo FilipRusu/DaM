@@ -1,10 +1,8 @@
-package ej1;
+package test;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -39,7 +37,7 @@ public class SocketTCPClient {
 		SocketTCPClient cliente=new SocketTCPClient("localhost", 49171);
 		try {
 		cliente.start();
-		cliente.dos.writeUTF("ANDRES");
+		cliente.dos.writeUTF("SAMI");
 		Thread.sleep(4000);
 		System.out.println("Palabra en minuscula: "+cliente.dis.readUTF());
 		cliente.stop();
