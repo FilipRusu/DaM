@@ -6,15 +6,19 @@ import modelo.Pedido;
 import servicio.ClienteService;
 import servicio.DireccionService;
 import servicio.PedidoService;
+import util.HibernateUtil;
 
 import java.util.Scanner;
+
+import org.hibernate.Hibernate;
+import org.hibernate.SessionFactory;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        SessionFactory sf=HibernateUtil.getSessionFactory();
         ClienteService clienteService = new ClienteService();
         DireccionService direccionService = new DireccionService();
         PedidoService pedidoService = new PedidoService();
@@ -37,6 +41,7 @@ public class MainApp {
         }
 
         sc.close();
+        sf.close();
         System.out.println("FIN");
     }
 
@@ -106,7 +111,7 @@ public class MainApp {
                     int i = 0;
                     while (i < c.getPedidos().size()) {
                         Pedido p = c.getPedidos().get(i);
-                        System.out.println("  " + i + ": " + p.getDescripcion());
+                        System.out.println("  " + i + ": " + p.getDescription());
                         i++;
                     }
                 }
@@ -236,7 +241,7 @@ public class MainApp {
                 System.out.print("ID pedido: ");
                 Pedido p = service.obtenerPedido(Long.parseLong(sc.nextLine()));
                 if (p == null) System.out.println("No existe");
-                else System.out.println("Descripcion: " + p.getDescripcion());
+                else System.out.println("Descripcion: " + p.getDescription());
             }
 
             if (opc == 3) {
@@ -245,7 +250,7 @@ public class MainApp {
                 Pedido p = service.obtenerPedido(id);
                 if (p != null) {
                     System.out.print("Nueva descripción: ");
-                    p.setDescripcion(sc.nextLine());
+                    p.setDescription(sc.nextLine());
                     service.actualizarPedido(p);
                     System.out.println("Pedido actualizado.");
                 }

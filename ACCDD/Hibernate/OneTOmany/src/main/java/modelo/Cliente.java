@@ -1,7 +1,8 @@
 package modelo;
 
+import java.security.cert.TrustAnchor;
 import java.util.ArrayList;
-
+import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -9,6 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
@@ -19,26 +21,26 @@ import jakarta.persistence.Table;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator ="seq_cl")
-	@SequenceGenerator(name = "seq_cl",sequenceName = "SEQ_CLIENTE")
-	private int id;
-	
+	@SequenceGenerator(name = "seq_cl",sequenceName = "SEQ_CLIENTE", allocationSize = 1)
+	private Long id;
 	private String nombre;
 	
-	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true )
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "DIRECCION_ID",unique = true, nullable = true)
 	private Direccion direccion;
 	
-	
-	private ArrayList<Pedido> pedidos;
+	@OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL  ,orphanRemoval = true, fetch = FetchType.LAZY)
+	private List<Pedido> pedidos = new ArrayList<Pedido>();
 	
 	public Cliente() {
 
 	}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -58,11 +60,11 @@ public class Cliente {
 		this.direccion = direccion;
 	}
 	
-	public ArrayList<Pedido> getPedidos() {
+	public List<Pedido> getPedidos() {
 		return pedidos;
 	}
 
-	public void setPedidos(ArrayList<Pedido> pedidos) {
+	public void setPedidos(List<Pedido> pedidos) {
 		this.pedidos = pedidos;
 	}
 
@@ -70,6 +72,14 @@ public class Cliente {
 	public String toString() {
 		return "Cliente [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + "]";
 	}
+
+	public void addPedido(Pedido p) {
+		pedidos.add(p);
+		
+	}
 	
+	public void removePedido(Pedido p) {
+		pedidos.remove(p);
+	}
 	
 }

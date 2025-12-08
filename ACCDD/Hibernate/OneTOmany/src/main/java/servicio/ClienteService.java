@@ -1,18 +1,27 @@
 package servicio;
 
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+
 import dao.ClienteDAO;
+import dao.ClienteDAOImpl;
 import modelo.Cliente;
+import modelo.Direccion;
 import modelo.Pedido;
 
 public class ClienteService {
-
+	
     private final ClienteDAO dao = new ClienteDAOImpl();
 
+    
+    
     // =======================
     // VALIDACIONES
     // =======================
 
-    private void validarCliente(Cliente c) {
+
+	private void validarCliente(Cliente c) {
         if (c == null)
             throw new IllegalArgumentException("El cliente no puede ser null");
 
@@ -20,11 +29,12 @@ public class ClienteService {
             throw new IllegalArgumentException("El nombre del cliente es obligatorio");
     }
 
-    private void validarPedido(Pedido p) {
+
+	private void validarPedido(Pedido p) {
         if (p == null)
             throw new IllegalArgumentException("El pedido no puede ser null");
 
-        if (p.getDescripcion() == null || p.getDescripcion().trim().equals(""))
+        if (p.getDescription() == null || p.getDescription().trim().equals(""))
             throw new IllegalArgumentException("La descripción del pedido es obligatoria");
     }
 
@@ -42,6 +52,7 @@ public class ClienteService {
         while (i < pedidos.size()) {
             Pedido p = pedidos.get(i);
             validarPedido(p);
+            p.setCliente(c);
             c.addPedido(p);
             i++;
         }
@@ -65,7 +76,7 @@ public class ClienteService {
     }
 
     public void eliminarPedido(Long idCliente, int index) {
-        Cliente c = dao.obtener(idCliente);
+        Cliente c = dao.obtenerClienteConInicializacion(idCliente);
         if (c == null)
             throw new IllegalArgumentException("Cliente no encontrado");
 

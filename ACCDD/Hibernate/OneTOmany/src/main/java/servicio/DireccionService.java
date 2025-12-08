@@ -1,10 +1,13 @@
 package servicio;
 
+import modelo.Direccion;
+
+import org.hibernate.SessionFactory;
+
+import dao.*;
 public class DireccionService {
-
-    private final DireccionDAO dao = new DireccionDAOImpl();
-
-    private void validar(Direccion d) {
+	private final DireccionDAO dao = new DireccionDAOImpl();
+	private void validar(Direccion d) {
         if (d == null)
             throw new IllegalArgumentException("La dirección no puede ser null");
 

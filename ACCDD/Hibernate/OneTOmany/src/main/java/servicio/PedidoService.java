@@ -1,14 +1,21 @@
 package servicio;
 
-public class PedidoService {
+import modelo.*;
 
+import org.hibernate.SessionFactory;
+
+import dao.*;
+
+public class PedidoService {
     private final PedidoDAO dao = new PedidoDAOImpl();
 
-    private void validar(Pedido p) {
+   
+
+	private void validar(Pedido p) {
         if (p == null)
             throw new IllegalArgumentException("El pedido no puede ser null");
 
-        if (p.getDescripcion() == null || p.getDescripcion().trim().equals(""))
+        if (p.getDescription() == null || p.getDescription().trim().equals(""))
             throw new IllegalArgumentException("La descripción es obligatoria");
     }
 
