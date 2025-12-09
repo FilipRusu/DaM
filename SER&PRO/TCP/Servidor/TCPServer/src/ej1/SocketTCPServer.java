@@ -41,8 +41,6 @@ public class SocketTCPServer {
 		servidor.dos.writeUTF(aux);
 		servidor.stop();
 	}
-		
-		
 	} catch (Exception e) {
 		
 		}
