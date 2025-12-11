@@ -18,7 +18,6 @@ public class MainApp {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        SessionFactory sf=HibernateUtil.getSessionFactory();
         ClienteService clienteService = new ClienteService();
         DireccionService direccionService = new DireccionService();
         PedidoService pedidoService = new PedidoService();
@@ -41,7 +40,6 @@ public class MainApp {
         }
 
         sc.close();
-        sf.close();
         System.out.println("FIN");
     }
 
