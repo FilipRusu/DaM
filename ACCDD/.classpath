@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="ACC/src"/>
+	<classpathentry kind="src" path="ACDD2/src/main/java"/>
+	<classpathentry kind="src" path="ACDD2/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/Biblioteca/src/main/java"/>
+	<classpathentry kind="src" path="Hibernate/Biblioteca/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/EmpleadosHibernate/src/main/java"/>
+	<classpathentry kind="src" path="Hibernate/EmpleadosHibernate/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/ExamenHibernateFilip/src/main/java"/>
+	<classpathentry kind="src" path="Hibernate/ExamenHibernateFilip/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/MiProyectoConsultas/src/main/java"/>
+	<classpathentry kind="src" path="Hibernate/MiProyectoConsultas/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/OneTOmany/src/main/java"/>
+	<classpathentry kind="src" path="Hibernate/OneTOmany/src/test/java"/>
+	<classpathentry kind="src" path="Hibernate/onoToOne"/>
+	<classpathentry kind="src" path="MiProyecto/src/main/java"/>
+	<classpathentry kind="src" path="MiProyecto/src/test/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/build/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/demo/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/generated/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/legacy/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/main/core-api/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/main/core-impl/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/main/protocol-impl/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/main/user-api/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/main/user-impl/java"/>
+	<classpathentry kind="src" path="mysql-connector-j-9.5.0/src/test/java"/>
+	<classpathentry kind="src" path="OraclePracticar/src"/>
+	<classpathentry kind="src" path="PruebaUT1/src/main/java"/>
+	<classpathentry kind="src" path="PruebaUT1/src/test/java"/>
+	<classpathentry kind="src" path="Repaso/src/main/java"/>
+	<classpathentry kind="src" path="Repaso/src/test/java"/>
+	<classpathentry kind="src" path="RepasoACCDD/src"/>
+	<classpathentry kind="src" path="RepasoClase/src/main/java"/>
+	<classpathentry kind="src" path="RepasoClase/src/test/java"/>
+	<classpathentry kind="src" path="RepasoOracle/src"/>
+	<classpathentry kind="src" path="SQLITE/src"/>
+	<classpathentry kind="lib" path="mysql-connector-j-9.5.0/mysql-connector-j-9.5.0.jar"/>
+	<classpathentry kind="output" path="ACC/bin"/>
+</classpath>
