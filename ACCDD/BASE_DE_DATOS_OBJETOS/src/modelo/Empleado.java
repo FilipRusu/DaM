@@ -72,6 +72,12 @@ public class Empleado {
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
+	@Override
+	public String toString() {
+		return "Empleado [id_emp=" + id_emp + ", apellido=" + apellido + ", oficio=" + oficio + ", fecha_alta="
+				+ fecha_alta + ", salario=" + salario + ", comision=" + comision + ", jefe=" + jefe + ", departamento="
+				+ departamento + "]";
+	}
 
 	
 	
