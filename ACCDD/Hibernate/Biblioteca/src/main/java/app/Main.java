@@ -1,29 +1,43 @@
 package app;
 
+import java.util.List;
+
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import jakarta.persistence.Query;
 import modelo.DetalleLibro;
 import modelo.Libro;
 import util.HibernateUtil;
 
 public class Main {
-
-	public static void main(String[] args) {
+	SessionFactory sf= HibernateUtil.getSessionFactory();
+	 
 	
-		SessionFactory sf= HibernateUtil.getSessionFactory();
-		
-		Libro p=new Libro();
-		DetalleLibro dl= new DetalleLibro();
-		
+	public void recuperarDatos() {
 		try(Session session = sf.openSession()) {
-			dl =session.get(DetalleLibro.class,3L);
-			session.beginTransaction();
-			session.remove(dl);
-			session.getTransaction().commit();
+			Query query=session.createQuery("select d.libro.titulo from DetalleLibro d where editorial=:pais",Object.class);
+		query.setParameter("pais", "AAAA");	
+			
+		String nombre = (String) query.getSingleResult();
+		
+		
+			System.out.println(nombre);
+		
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.recuperarDatos();
 	}
 }

@@ -35,9 +35,13 @@ public class ServidorContador {
 		nr++;
 		return nr;
 	}
+	
 	public static void main(String[] args) {
 		try {
-			
+			ServidorContador sc=new ServidorContador(49171);
+			while(true) {
+			sc.start(sc);
+			}
 		} catch (Exception e) {
 			
 		}

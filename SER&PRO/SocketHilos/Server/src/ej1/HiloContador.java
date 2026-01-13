@@ -30,11 +30,10 @@ public class HiloContador extends Thread {
 			String aux="Eres el hilo:"+server.sumar();
 			escritor.write(aux);
 			escritor.flush();
-			socket.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-	
+			
 		}
 	}
 }
