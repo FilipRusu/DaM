@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <meta http-equiv="content-language" content="en">
+ <title>AMX Mod X - Half-Life Scripting for Pros!</title>
+ <meta name="description" content="AMX Mod X (AMXX) is a Metamod plugin which allows you to write modifications for Half-Life with Small scripting language.">
+ <meta name="keywords" content="amx mod x, amxmodx, amx mod, amxmod, amx, amxx, mod, cs, cstrike, czero, counter-strike, metamod, plugin, plugins, halflife, half-life, server, scripts, development, forum, forums, servers, csstats, download">
+ <meta name="author" content="AMX Mod X Development Team">
+ <meta name="publisher" content="AMX Mod X Development Team">
+ <meta name="copyright" content="2003-2026 by the AMX Mod X Development Team">
+ <meta name="robots" content="index,follow">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="shortcut-icon" href="favicon.ico" type="image/x-icon">
+ <link rel="alternate" type="application/rss+xml" title="AMX Mod X News" href="rss2.php">
+ <link rel="alternate" type="application/rss+xml" title="AMX Mod X Plugins" href="rssplugins.php">
+  <script language="JavaScript" src="firstfocus.js"></script> <!-- brad20060110: added javascript line -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<!--brad20060110 <body> -->
+<body onload="setFirstFocus()">
+ <div align="center">
+  <table width="1300" border="0" style="border-collapse:collapse;margin-top:15px;">
+   <colgroup><col width="15%"><col width="85%"></colgroup>
+   <tr>
+    <td colspan="2" id="top" class="each">
+	<a href="/"><img src="images/amxxlarge.jpg" border="0" width="500" height="150" alt="AMX Mod X" align="left"></a>
+<div style="float:right;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9829192557293856";
+google_alternate_color = "3D5D80";
+google_ad_width = 234;
+google_ad_height = 60;
+google_ad_format = "234x60_as";
+google_ad_type = "text";
+google_ad_channel ="8983487976";
+google_color_border = "3D5D80";
+google_color_bg = "eeeeee";
+google_color_link = "FFFFFF";
+google_color_text = "000000";
+google_color_url = "F2984C";
+//--></script>
+<script type="text/javascript"
+  src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br />
+<br />
+<br />
+<form action="/search.php" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-9829192557293856:xk2j4kmvksq" />
+    <input type="hidden" name="cof" value="FORID:11" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</div>
+	</td>
+   </tr><tr>
+    <td id="nav" class="each" width="15%">
+     <br>
+	 <b style="color: #004000;">Main</b><br>
+     <a href="index.php" class="navlinks">&gt; News</a><br>
+     <a href="about.php" class="navlinks">&gt; About</a><br>
+     <br>
+	 <b style="color: #004000;">Files</b><br>
+     <a href="downloads.php" class="navlinks">&gt; Downloads</a><br>
+     <a href="downloads-new.php" class="navlinks">&gt; All Builds</a><br>
+     <a href="compiler.php" class="navlinks">&gt; Plugins</a><br>
+	 <br>
+	 <b style="color: #004000;">Resources</b><br>
+     <a href="webcompiler.cgi" class="navlinks">&gt; Compiler</a><br>
+	 <a href="https://bugs.alliedmods.net/" class="navlinks">&gt; Report Bugs</a><br>
+	 <a href="stats.php" class="navlinks">&gt; Addon Stats</a><br>
+	 <a href="https://cs.alliedmods.net/amxmodx/source" class="navlinks">&gt; Cross-Reference</a><br>
+	 <a href="/api/" class="navlinks">&gt; Scripting API</a><br>
+     <a href="https://wiki.amxmodx.org/Category:Documentation_%28AMX_Mod_X%29" target="_blank" class="navlinks">&gt; Documentation</a><br>
+          <br>
+	 <b style="color: #004000;">Community</b><br>
+     <a href="forums/" class="navlinks">&gt; Forums</a><br>
+     <a href="https://discord.gg/HUc67zN" class="navlinks">&gt; Discord</a><br>
+     <a href="irc.php" class="navlinks">&gt; IRC</a><br>
+	 <br>
+	 <b style="color: #004000;">Who</b><br>
+     <a href="linkus.php" class="navlinks">&gt; Link us</a><br>
+     <a href="credits.php" class="navlinks">&gt; Credits</a><br><br>
+	 <br>
+<!-- 
+     <div style="text-align:center;"><a href="https://sourceforge.net/donate/index.php?group_id=100470" target="_blank"><img src="images/donate.jpg" border="0" width="88" height="32" alt="Donate"></a></div>
+     <br>
+     <div style="text-align:center;"><a href="https://sourceforge.net/projects/amxmodx/" target="_blank"><img src="images/sflogo.png" width="88" height="31" border="0" alt="SourceForge.net Logo"></a></div>
+     <br>
+     <div style="text-align:center;"><a href="https://www.opensource.org/docs/definition.php" target="_blank"><img src="https://www.opensource.org/trademarks/opensource/web/transparent/opensource-55x48-t.png" border="0" alt="Open Source"></a></div>
+     <br><br>
+-->
+         </td>
+    <td id="txt" class="each" width="85%">
+<br/>
+<div align='center'> <table border="0" width="80%" class="news">
+  <colgroup><col width="70%"><col width="30%"></colgroup>
+  <tr>
+   <td class="topic">Development Roundup, We need you!</td>
+   <td class="date">Sep 09, 2018 11:37</td>
+  </tr><tr>
+   <td colspan=2 class="text">Hey everyone, long time no see!<br />
+<br />
+Today, we would like to talk about the next AMX Mod X version, what is happening, and what our future plans are.<br />
+<br />
+<br />
+<b>What was taking so long?</b><br />
+<br />
+As you may already understand, AMXX as a project is past its prime. Not many people are actively working on the code base, a direct result of reduced interest in the project specifically and GoldSrc games in general. Since we moved the project to <a href='https://github.com/alliedmodders/amxmodx'>GitHub</a>, development has become quite a bit more active, but the pace is ultimately still slow. Our primary goal still is to once again provide an up-to-date release, including many bug fixes and long-awaited features.<br />
+<br />
+Due to the waning interest in the games it supports, it is only natural that contributors would dip in and out of active development. So without a core team available to push through issues and keep the project on track, the contributions became a bit chaotic from a scheduling perspective.<br />
+<br />
+My mistake as a maintainer was not setting clear targets that could be achieved with the limited time that both our contributors and I could put into the project. This meant that the number of changes got larger and larger as time passed (and oh how quickly it passes). I failed to get help from the community to process and test new changes and failed to tighten the scope of what we could ultimately deliver as an official release.<br />
+<br />
+However, please keep in mind that all of the contributors are volunteers, and we can't force anybody to devote more time to AMXX than they are comfortable with.<br />
+<br />
+<br />
+<b>Where we are now</b><br />
+<br />
+As of 1.9, we have put the development version of AMXX into a feature-frozen state. This means that no new functionality and improvements will be accepted into what is going to eventually be the next release of AMX Mod X. Development will now focus on bug fixes and our time spent preparing for the next release.<br />
+<br />
+We know that we still have a few exciting improvements and even the odd new feature in the pipelines, but we have to make a commitment to a release at some point. Once we have wrapped up the past couple of years into an official release, it will be much easier for our small team to get new stuff into the hands of users.<br />
+<br />
+<br />
+<b>What is new?</b><br />
+<br />
+AMX Mod X has had numerous fixes and improvements across all facets of the project:<br />
+<br />
+<ul><li>Stability and performance improvements<br />
+<li>Official support for <a href='https://github.com/dreamstalker/rehlds'>ReHLDS</a> and <a href='https://github.com/s1lentq/ReGameDLL_CS'>ReGameDLL</a><br />
+<li>Much improved UTF-8 support across the project<br />
+<li>Significant improvements to modules and the official plugins<br />
+<li>(Almost) completely revised and completed documentation<br />
+<li>Tons of new functionalities for plugin developers and admins</ul><br />
+<br />
+The full detailed release notes are currently work in progress, and can be found in the Wiki: <a href='https://wiki.alliedmods.net/AMX_Mod_X_1.9_Release_Notes'>https://wiki.alliedmods.net/AMX_Mod_X_1.9_Release_Notes</a>.<br />
+<br />
+<br />
+<b>What is next?</b><br />
+<br />
+We need you!<br />
+<br />
+As outlined above, this release has gotten pretty large, and we somewhat neglected including the community in the development. We are in sore need of more people that are willing to test and verify the new version.<br />
+<br />
+Check out the <a href='https://wiki.alliedmods.net/AMX_Mod_X_1.9_Release_Notes'>release notes</a> and give our new features a try, if something does not work as you expect it should, please let us know.<br />
+AMXX 1.9 latest build can be downloaded here: <a href='https://www.amxmodx.org/downloads-new.php'>https://www.amxmodx.org/downloads-new.php</a>.<br />
+<br />
+As usual, AMXX should retain full backward compatibility, so if existing functionality breaks after upgrading, file a bug report.<br />
+<br />
+<br />
+<b>How to report bugs or request features?</b><br />
+<br />
+We've decided to complete our switch to <a href='https://github.com/alliedmodders/amxmodx'>GitHub</a> and use their integrated <a href='https://github.com/alliedmodders/amxmodx/issues'>issue tracker</a> for all future bug reports and feature requests.<br />
+<br />
+While this will require you to create a GitHub account to get in touch with contributors, we hope that it provides us with similar benefits as moving our code there. Having everything in one place for development should be more intuitive and get more eyes on the project. Also, quite frankly, the old issue tracker was barely used and still contains numerous outdated tickets that might not have been relevant for years.<br />
+<br />
+The old tracker will still be publicly available, but new AMXX tickets will no longer be accepted.<br />
+<br />
+The forum will remain the place for general support, help, and discussion.<br />
+<br />
+<br />
+<b>The Future</b><br />
+<br />
+First, starting from the next AMX Mod X release we will follow SourceMod in switching to a rolling-release cycle. We will provide more information at a later date, but this essentially means that we will be able to provide you with more frequent stable releases. It is simply not feasible for a mature project like AMXX to focus on big iterative releases that take years to come together.<br />
+<br />
+Secondly, future changes will be focused on user-related issues, such as new/improved tools for managing servers and customization. This has been the primary area we have left out of this planned release, mostly because of missing time, but also because we needed to get the internals right before we can improve our user-facing tools.<br />
+<br />
+Finally, we will try to get the community involved more. Even though we aren't nearly as many as we used to be, people still care about the project. We would like to thank every one of you for that.</td>
+  </tr><tr>
+   <td class="author">.: by <a href="https://forums.alliedmods.net/member.php?u=7779" target="blank">Arkshine</a></td>
+   <td class="comments"><a href="https://forums.alliedmods.net/showthread.php?t=310564">98 comments</a></td>
+  </tr>
+ </table>
+<br><br>
+ <table border="0" width="80%" class="news">
+  <colgroup><col width="70%"><col width="30%"></colgroup>
+  <tr>
+   <td class="topic">Security advisory regarding AMX Mod 2010.1</td>
+   <td class="date">Dec 09, 2015 13:16</td>
+  </tr><tr>
+   <td colspan=2 class="text">AMX Mod X security advisory<br />
+<a href='http://amxmod.net/'>amxmod.net</a> distributing malware with backdoors<br />
+ <br />
+<b>Important note</b><br />
+ <br />
+This special news should only concern server operators who have AMX Mod 2010.1 installed or plan to install it. If you know server operators that use AMX Mod 2010.1<br />
+please consider making them aware of this post. This is an important matter that is worth to be mentioned on the official AMXModX site.<br />
+ <br />
+<b>AMX Mod</b><br />
+ <br />
+<a href="https://www.amxmodx.org/about.php">AMX Mod</a> has been officially abandoned years ago, but recently one of its users (St�phane "Flatounet" Vigne) is attempting to update it.<br />
+Development unfortunately progresses behind closed doors and nobody really knows what's happening.<br />
+ <br />
+<b>Context</b><br />
+ <br />
+Some days ago I've been asked to provide help in migrating an AMX Mod 2010.1 installation to AMXModX for various reasons. Oddly enough the server got attacked a few short hours later<br />
+by someone who got a hold of the servers RCON password, and it was unclear how the attacker obtained it.<br />
+ <br />
+<b>Symptoms</b><br />
+ <br />
+If you are experiencing any of these problems on your server it might be an indication that someone exploited your AMX Mod 2010.1 installation:<br />
+ <br />
+<ul><li>One or several players are suddenly admins<br />
+<li>Server performance seems to fluctuate unexpectedly<br />
+<li>Server appears to crash or shut down randomly<br />
+<li>Ban lists have been wiped or altered<br />
+<li>Server files have been altered or deleted<br />
+</ul><br />
+ <br />
+<b>Log analysis</b><br />
+ <br />
+Usually the log does not contain useful information if the RCON password is not yet known (explanations below).<br />
+In this specific example however, the password was already known. If you are in this situation you would find similar logs:<br />
+ <br />
+His first attempt to check RCON validity:<br />
+<tt>L 12/04/2015 - 10:58:09: Rcon: "rcon 1627405150 "xxxxxx" echo HLSW: Test" from "2.3.87.69:7130"</tt><br />
+ <br />
+Adding a SteamID to the admins list, likely via a VPS IP:<br />
+<tt>L 12/04/2015 - 11:02:10: Rcon: "rcon 1779953110 "xxxxxx" amx_addadmin "STEAM_0:0:13923116" abcdefghijklmnopqrstu" from "195.154.177.107:7130"</tt><br />
+ <br />
+Disabling the server log to hide the following commands:<br />
+<tt>L 12/04/2015 - 11:04:38: Rcon: "rcon 873211125 "xxxxxx" log off" from "195.154.177.107:7130"<br />
+L 12/04/2015 - 11:04:38: Log file closed<br />
+Server logging disabled.<br />
+</tt><br />
+ <br />
+Malicious activity after this point may include clearing ban lists of SteamIDs and IPs or changing server variables like <tt>sys_ticrate</tt> in an attempt to disrupt server functionality.<br />
+ <br />
+ <br />
+<b>The hidden commands</b><br />
+ <br />
+Since the RCON was already known in this case, the log doesn't help us understand how it has been found.<br />
+Assuming the RCON password is unknown and has not been compromised, a possible threat is a malicious server plugin that allows unauthorized clients to get a hold of this information.<br />
+ <br />
+Unfortunately my investigations have found that AMX Mod 2010.1 itself is that malicious server plugin. Naively checking the provided source code on the official website did not lead<br />
+to anything. Checking the compiled binaries however revealed some interesting things!<br />
+ <br />
+So let's look at what our disassembler/decompiler shows us. We want to find the ClientCommand() function which is used by the engine to receive input from a client console. The decompilation shows us an unwelcomed surpise:<br />
+ <br />
+<img src="https://i.imgur.com/diPvIVO.png"><br />
+ <br />
+What do we see here?<br />
+ <br />
+Mostly a silly attempt to hide specific commands (by checking a string character by character) doing some nasty things:<br />
+<ul><li><tt>silenmod</tt>: Suppress server log temporarilyy when cmdr and cmdc commands are used<br />
+<li><tt>mrp</tt>: Get/change the servers RCON password<br />
+<li><tt>setaccess</tt>: Modify a users admin access flags<br />
+<li><tt>cmdr</tt>: Execute arbitrary console commands on the server<br />
+<li><tt>cmdc</tt>: Execute arbitrary console commands on a specified client<br />
+<li><tt>cfile</tt>: Check whether a specified file exists<br />
+<li><tt>wfile</tt>: Append data to a specified file<br />
+<li><tt>dfile</tt>: Delete a specified file<br />
+<li><tt>uptime</tt>: Check server uptime<br />
+<li><tt>slog</tt>: Disable server logging completely<br />
+</ul><br />
+ <br />
+Access to these commands is restricted to clients marked as AMX Mod 2010.1 devs. This client authentification happens during client connection, and we find is_dev_authid() in the binaries:<br />
+ <br />
+<img src="https://i.imgur.com/gg3OHQ6.png"><br />
+ <br />
+<img src="https://i.imgur.com/Oq99nEU.png"><br />
+ <br />
+We can see three hardcoded SteamIDs, checking character by character but not verifying two digits. Two of the specific SteamIDs matching these "wildcards" have been confirmed by the logs and IPs:<br />
+ <br />
+<tt>STEAM_<b>0</b>:?:<b>1169</b>??<b>26</b></tt> -> <tt>STEAM_0:1:11696626</tt> ; Tried to connect at a later point but was banned by an anti-nosmoke plugin...<br />
+<tt>STEAM_<b>0</b>:?:<b>1392</b>??<b>16</b></tt> -> <tt>STEAM_0:0:13923116</tt> ; Attempted to add himself as an admin<br />
+<tt>STEAM_<b>0</b>:?:<b>1320</b>??<b>37</b></tt> -> Not used, no specific SteamID confirmed<br />
+ <br />
+<b>Solution</b><br />
+ <br />
+It appears that only 2010.1 core has been maliciously modified. Pawn plugins should be safe. If you still want to keep using AMXMod regardless, strongly consider the following recommendations:<br />
+ <br />
+<ul><li>Ban these SteamIDs:<br />
+ <br />
+Confirmed wildcard matches:<br />
+[INDENT]<tt>STEAM_0:0:11696626<br />
+STEAM_0:0:13923116</tt>[/INDENT]<br />
+ <br />
+Potential SteamIDs matched by the third. Checking 198 valid IDs these are the ones we found with a pofile and with Counter-Strike in their accounts.<br />
+The malicious accounts are likely among the private profiles, but it should be safe to ban them all:<br />
+[INDENT]<tt>STEAM_0:0:13201737</tt> <i>; Private</i><br />
+<tt>STEAM_0:1:13201737</tt> <i>; Private</i><br />
+<tt>STEAM_0:1:13207837</tt> <i>; Private</i><br />
+<tt>STEAM_0:1:13203837</tt> <i>; Private, VAC</i><br />
+<tt>STEAM_0:0:13204137</tt> <i>; Last Online 2254 days ago</i><br />
+<tt>STEAM_0:0:13205937</tt> <i>; Last Online 1190 days ago</i><br />
+<tt>STEAM_0:0:13209137</tt> <i>; Last Online 583 days ago</i><br />
+<tt>STEAM_0:1:13201537</tt> <i>; Last Online 2764 days ago</i><br />
+<tt>STEAM_0:1:13202837</tt> <i>; Last Online 678 days ago</i><br />
+<tt>STEAM_0:1:13204537</tt> <i>; Last Online 1386 days ago</i>[/INDENT]<br />
+ <br />
+The SteamIDs used with the amx_addadmin command, attempting to give them admin rights:<br />
+[INDENT]<tt>STEAM_0:1:42507932<br />
+STEAM_0:1:39310704<br />
+STEAM_0:1:1108105</tt>[/INDENT]<br />
+ <br />
+Also these basic safety precautions<br />
+<li>Change your RCON passwords (consider your passwords compromised even if nothing has happened yet)<br />
+<li>Check your plugin sources and don't hesitate to recompile them yourself<br />
+<li>Don't trust this developer with future binary updates (AMXMod 2016 is apparently coming up). Feel free to contact me to make sure you are safe.<br />
+<li>Backup all your configuration files.<br />
+<li>Keep an eye on your logs and scan them for suspicious entries<br />
+</ul><br />
+ <br />
+We hope this helps to prevent any security issues on other servers that run AMXMod, or helps them deal with it if they already have 2010.1 installed.</td>
+  </tr><tr>
+   <td class="author">.: by <a href="https://forums.alliedmods.net/member.php?u=7779" target="blank">Arkshine</a></td>
+   <td class="comments"><a href="https://forums.alliedmods.net/showthread.php?t=275836">54 comments</a></td>
+  </tr>
+ </table>
+<br><br>
+ <table border="0" width="80%" class="news">
+  <colgroup><col width="70%"><col width="30%"></colgroup>
+  <tr>
+   <td class="topic">New Maintainer, Transition to GitHub</td>
+   <td class="date">May 16, 2014 02:38</td>
+  </tr><tr>
+   <td colspan=2 class="text">Hi everyone! A few announcements.<br />
+<br />
+First, I'm proud to announce <a href='https://forums.alliedmods.net/member.php?u=7779'>Arkshine</a> as the official maintainer for AMX Mod X. As one our earliest community members, Arkshine understands both the project's history and the current landscape of the community. He's been extremely helpful reviewing patches and fixing bugs, and has shown excellent judgment in making sure AMX Mod X remains a high quality tool. Please welcome Arkshine!<br />
+<br />
+Second, we have moved the AMX Mod X source code to <a href='https://github.com/alliedmodders/amxmodx'>GitHub</a>.<br />
+<br />
+A little over 10 years ago, <a href='https://forums.alliedmods.net/member.php?u=5'>SniperBeamer</a> founded AMX Mod X. Its sister project, AMX Mod, had been abandoned. No one had write access to the source code, and critical pieces were closed-source. SniperBeamer forked it into the most public place possible - at the time, SourceForge - to ensure that it would outlive its maintainers. As the project grew and source control systems improved, SourceForge became a burden, and we moved all hosting to AlliedModders.<br />
+<br />
+10 years later, that landscape has changed again. GitHub is much more accessible than either our tools or other project hosting sites. It has a much simpler workflow and provides both projects and individual contributors with a great deal of public visibility. I'm hoping that this move affords AMX Mod X continued life, and our contributors more ways to interact with the development community at large.<br />
+<br />
+We'll continue to use <a href='https://bugs.alliedmods.net/'>https://bugs.alliedmods.net/</a> for bug reporting and release management. For more information on Git and GitHub, see: <a href='https://wiki.alliedmods.net/Git_Tutorial'>https://wiki.alliedmods.net/Git_Tutorial</a></td>
+  </tr><tr>
+   <td class="author">.: by <a href="https://forums.alliedmods.net/member.php?u=2" target="blank">BAILOPAN</a></td>
+   <td class="comments"><a href="https://forums.alliedmods.net/showthread.php?t=240468">20 comments</a></td>
+  </tr>
+ </table>
+<br><br>
+ <table border="0" width="80%" class="news">
+  <colgroup><col width="70%"><col width="30%"></colgroup>
+  <tr>
+   <td class="topic">AMX Mod X 1.8.2 for 2013 HLDS Update</td>
+   <td class="date">Feb 14, 2013 13:18</td>
+  </tr><tr>
+   <td colspan=2 class="text">We have released AMX Mod X 1.8.2 as an emergency bug-fix release. <b>It is very important that you do not upgrade until you have read below.</b><br />
+<br />
+The February 2013 update to Counter-Strike 1.6 is part of a large transition of HLDS games to <a href='https://developer.valvesoftware.com/wiki/SteamCMD'>SteamCMD</a>. Because this transition is not yet complete, AMX Mod X may not yet work on specific games. Those games are listed below.<br />
+<br />
+In addition, a Metamod update is required for all new servers. We are providing our own Metamod builds (branded as Metamod 1.20-am) until the official Metamod site can be updated. Note that on Linux, the Metamod DLL had to be renamed, which means you will have to edit <tt>liblist.gam</tt>. This is true even if you choose to use Metamod-P.<br />
+<br />
+<b>AMX Mod X 1.8.2 will NOT WORK on the following games:</b><ul><li>Any server installed using HLDSUpdateTool</ul><br />
+<b>Metamod 1.20-am and 1.21-am will work on all games supported by Metamod 1.19<br />
+(CS:CZ Bots cause a crash with 1.20-am so use 1.21-am instead).</b><br />
+<br />
+<br />
+To get all downloads, visit <a href="https://www.amxmodx.org/downloads.php">http://www.amxmodx.org/downloads.php</a><br />
+For upgrade instructions and a full changelog, visit <a href='http://wiki.alliedmods.net/AMX_Mod_X_1.8.2_Release_Notes'>http://wiki.alliedmods.net/AMX_Mod_X_1.8.2_Release_Notes</a><br />
+<br />
+<i>Special thanks for this release goes to patch contributors Scott Ehlert, arkshine, Fysiks, Reuben Morais, Lev2001, joaquimandrade, Hawk552, and Ryan L. Thank you for your support!</i></td>
+  </tr><tr>
+   <td class="author">.: by <a href="https://forums.alliedmods.net/member.php?u=2" target="blank">BAILOPAN</a></td>
+   <td class="comments"><a href="https://forums.alliedmods.net/showthread.php?t=208522">319 comments</a></td>
+  </tr>
+ </table>
+<br><br>
+ <table border="0" width="80%" class="news">
+  <colgroup><col width="70%"><col width="30%"></colgroup>
+  <tr>
+   <td class="topic">Downtime Over</td>
+   <td class="date">Jan 22, 2011 08:15</td>
+  </tr><tr>
+   <td colspan=2 class="text">More information here: <a href='https://forums.alliedmods.net/showthread.php?t=148196'>https://forums.alliedmods.net/showthread.php?t=148196</a><br />
+<br />
+Thanks for your patience!</td>
+  </tr><tr>
+   <td class="author">.: by <a href="https://forums.alliedmods.net/member.php?u=2" target="blank">BAILOPAN</a></td>
+   <td class="comments"><a href="https://forums.alliedmods.net/showthread.php?t=148197">47 comments</a></td>
+  </tr>
+ </table>
+<br><br>
+</div>
+<br>
+<div align="center"> 1 <a href="/index.php?page=2">2</a> ... <a href="/index.php?page=26">26</a> <a href="/index.php?page=2" rel="next">&raquo;</a></div>
+    </td>
+   </tr>
+  </table>
+ <br />
+  <span style="font-family:Verdana,sans-serif;font-size:10pt;">&copy; Copyright 2003-2026 AMX Mod X Dev Team</span>
+ </div>
+</body>
+</html>

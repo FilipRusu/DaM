@@ -1,4 +1,4 @@
-package com.example.miapp;
+package com.example.ejemplo1;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializar BD
         db = new DataBase(this);
+
 
         // Referencias
         etNombre = findViewById(R.id.etNombre);
