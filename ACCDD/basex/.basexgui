@@ -1,0 +1,104 @@
+# Version
+UPDATEVERSION = 12.2
+CHECKUPDATES = false
+
+# Paths
+INPUTPATH = /home/vespertino/Escritorio/ficheroxml/
+DATAPATH = /home/vespertino/Escritorio/basex/
+WORKPATH = /home/vespertino/Escritorio/basex/
+PROJECTPATH = /home/vespertino/Escritorio/basex/bin/
+
+# Layout
+FONT = SansSerif
+MONOFONT = Noto Sans Mono Condensed Black
+FONTSIZE = 18
+LISTMONO = true
+ANTIALIAS = System
+COLORRED = 21
+COLORGREEN = 14
+COLORBLUE = 7
+
+# Windows
+VIEWS = V H editor folder map plot - H text info table tree explore - - 
+GUISIZE0 = 960
+GUISIZE1 = 1048
+GUILOC0 = 960
+GUILOC1 = 32
+MAXSTATE = false
+SHOWBUTTONS = true
+SHOWINPUT = true
+SHOWSTATUS = true
+SHOWINFO = true
+SHOWMAP = true
+SHOWTABLE = false
+SHOWTEXT = true
+SHOWFOLDER = false
+SHOWEXPLORE = false
+SHOWPLOT = false
+SHOWEDITOR = true
+SHOWTREE = false
+SHOWPROJECT = true
+INDENTRESULT = false
+PREFTAB = 0
+LOOKANDFEEL = 
+LABELS = name,label,id
+SCROLLTABS = true
+MOUSEFOCUS = false
+XMLSUFFIXES = xml,xsd,svg,rdf,rss,rng,sch,xhtml
+ASCSORT = true
+CASESORT = true
+MERGEDUPL = false
+COLUMN = 1
+UNICODE = true
+SHOWMARGIN = true
+MARGIN = 80
+TABSPACES = true
+INDENT = 2
+SHOWINVISIBLE = true
+SHOWNL = false
+SHOWLINES = true
+MARKLINE = true
+SAVERUN = false
+PARSEPROJ = true
+AUTO = true
+FILES = *.xml, *.xq*
+SHOWHIDDEN = false
+SEARCHMODE = 0
+FILTERRT = false
+EXECRT = false
+DBNAME = Clase1
+LASTINSERT = 1
+
+# Visualizations
+MAPATTS = false
+MAPOFFSETS = 3
+MAPALGO = 0
+MAPWEIGHT = 0
+TREESLIM = true
+TREEATTS = false
+PLOTDOTS = 0
+PLOTXLOG = false
+PLOTYLOG = false
+MAXTEXT = 8388608
+MAXRESULTS = 500000
+
+# Search
+SEARCHED = 0
+REPLACED = 0
+
+# History
+COMMANDS = 0
+SEARCH = 0
+XQUERY = 0
+
+# Files
+EDITOR = 0
+INPUTS = 1
+INPUTS1 = /home/vespertino/Escritorio/ficheroxml/
+OPEN = 0
+PROJECTS = 1
+PROJECTS1 = /home/vespertino/Escritorio/basex/bin/
+PROJFILES = 0
+PROJCONTS = 0
+
+# Local Options

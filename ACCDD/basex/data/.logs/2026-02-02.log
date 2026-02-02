@@ -1,0 +1,236 @@
+18:44:36.471	SERVER	admin	OK	Server was started (port: 1984).		
+18:45:55.135	127.0.0.1:50974	admin	REQUEST	HELP	11.7 ms	
+18:45:55.139	127.0.0.1:50974	admin	OK		4.0 ms	
+18:46:20.906	127.0.0.1:50974	admin	REQUEST	HELP	0.48 ms	
+18:46:20.907	127.0.0.1:50974	admin	OK		0.56 ms	
+18:47:46.721	127.0.0.1:50974	admin	REQUEST	LIST	0.55 ms	
+18:47:46.725	127.0.0.1:50974	admin	OK		3.99 ms	
+18:54:52.321	127.0.0.1:56388	admin	REQUEST	OPEN Clase1	1.46 ms	
+18:54:52.336	127.0.0.1:56388	admin	OK	Database 'Clase1' was opened in 14.17 ms.	15.46 ms	
+18:54:52.342	127.0.0.1:56388	admin	REQUEST	XQUERY for $l in //libro return $l/titulo/text()	2.07 ms	
+18:54:52.605	127.0.0.1:56388	admin	OK	Query "bin" executed in 244.09 ms.	262.52 ms	
+19:09:46.243	127.0.0.1:44658	admin	REQUEST	CREATE DB Empresa	1.71 ms	
+19:09:46.250	127.0.0.1:44658	admin	OK	Database 'Empresa' created in 6.68 ms.	7.67 ms	
+19:09:46.252	127.0.0.1:44658	admin	REQUEST	ADD TO laura.xml [...]	0.37 ms	
+19:09:46.288	127.0.0.1:44658	admin	ERROR	"laura.xml.xml" (Line 1): El tipo de elemento "empleadoid" debe ir seguido de una de estas especificaciones de atributo: ">" o "/>".	35.74 ms	
+19:10:12.301	127.0.0.1:40896	admin	REQUEST	CREATE DB Empresa	0.65 ms	
+19:10:12.305	127.0.0.1:40896	admin	OK	Database 'Empresa' created in 3.68 ms.	4.32 ms	
+19:10:12.307	127.0.0.1:40896	admin	REQUEST	ADD TO laura.xml [...]	0.19 ms	
+19:10:12.309	127.0.0.1:40896	admin	ERROR	"laura.xml.xml" (Line 1): El tipo de elemento "empleadoid" debe ir seguido de una de estas especificaciones de atributo: ">" o "/>".	2.32 ms	
+19:39:28.043	127.0.0.1:40992	admin	REQUEST	OPEN Clase1	0.56 ms	
+19:39:28.045	127.0.0.1:40992	admin	OK	Database 'Clase1' was opened in 1.63 ms.	1.98 ms	
+19:39:28.049	127.0.0.1:40992	admin	REQUEST	XQUERY for $l in //libro return $l/titulo/text()	0.56 ms	
+19:39:28.051	127.0.0.1:40992	admin	OK	Query "bin" executed in 1.76 ms.	2.57 ms	
+19:42:03.951	127.0.0.1:41774	admin	REQUEST	OPEN Clase1	0.61 ms	
+19:42:03.955	127.0.0.1:41774	admin	OK	Database 'Clase1' was opened in 4.63 ms.	4.92 ms	
+19:42:03.960	127.0.0.1:41774	admin	REQUEST	XQUERY for $l in //libro return $l/titulo/text()	0.55 ms	
+19:42:03.964	127.0.0.1:41774	admin	OK	Query "bin" executed in 2.48 ms.	3.3 ms	
+19:42:21.246	127.0.0.1:35380	admin	REQUEST	OPEN Clase1	0.45 ms	
+19:42:21.247	127.0.0.1:35380	admin	OK	Database 'Clase1' was opened in 0.73 ms.	0.98 ms	
+19:42:21.251	127.0.0.1:35380	admin	REQUEST	XQUERY for $l in //libro return $l	0.47 ms	
+19:42:21.253	127.0.0.1:35380	admin	OK	Query "bin" executed in 1.73 ms.	2.34 ms	
+19:43:09.520	127.0.0.1:59932	admin	REQUEST	OPEN Clase1	0.42 ms	
+19:43:09.521	127.0.0.1:59932	admin	OK	Database 'Clase1' was opened in 0.88 ms.	1.11 ms	
+19:43:09.524	127.0.0.1:59932	admin	REQUEST	XQUERY for $l in //libro return $l	0.31 ms	
+19:43:09.526	127.0.0.1:59932	admin	OK	Query "bin" executed in 1.73 ms.	2.27 ms	
+19:43:45.606	127.0.0.1:41480	admin	REQUEST	OPEN Clase1	0.43 ms	
+19:43:45.607	127.0.0.1:41480	admin	OK	Database 'Clase1' was opened in 0.68 ms.	0.9 ms	
+19:43:45.612	127.0.0.1:41480	admin	REQUEST	XQUERY for $l in //libro return $l	0.7 ms	
+19:43:45.614	127.0.0.1:41480	admin	OK	Query "bin" executed in 1.59 ms.	2.21 ms	
+19:44:35.580	127.0.0.1:56988	admin	REQUEST	OPEN Clase1	0.42 ms	
+19:44:35.581	127.0.0.1:56988	admin	OK	Database 'Clase1' was opened in 0.67 ms.	0.89 ms	
+19:44:35.584	127.0.0.1:56988	admin	REQUEST	XQUERY for $l in //libro return $l	0.34 ms	
+19:44:35.586	127.0.0.1:56988	admin	OK	Query "bin" executed in 1.38 ms.	1.91 ms	
+19:45:00.812	127.0.0.1:33100	admin	REQUEST	OPEN Clase1	0.47 ms	
+19:45:00.813	127.0.0.1:33100	admin	OK	Database 'Clase1' was opened in 0.74 ms.	1.0 ms	
+19:45:00.816	127.0.0.1:33100	admin	REQUEST	XQUERY for $l in //libro return $l	0.44 ms	
+19:45:00.818	127.0.0.1:33100	admin	OK	Query "bin" executed in 1.35 ms.	1.83 ms	
+19:45:17.104	127.0.0.1:42140	admin	REQUEST	OPEN Clase1	0.38 ms	
+19:45:17.105	127.0.0.1:42140	admin	OK	Database 'Clase1' was opened in 0.82 ms.	1.07 ms	
+19:45:17.108	127.0.0.1:42140	admin	REQUEST	XQUERY for $l in //libro return $l	0.34 ms	
+19:45:17.110	127.0.0.1:42140	admin	OK	Query "bin" executed in 1.38 ms.	1.85 ms	
+19:47:55.073	127.0.0.1:56820	admin	REQUEST	OPEN Clase1	0.48 ms	
+19:47:55.074	127.0.0.1:56820	admin	OK	Database 'Clase1' was opened in 0.63 ms.	0.87 ms	
+19:47:55.077	127.0.0.1:56820	admin	REQUEST	XQUERY for $l in //libro return $l.text()	0.41 ms	
+19:47:55.099	127.0.0.1:56820	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 1/26: [XPST0008] Undeclared variable: $l.text.	22.07 ms	
+19:48:07.609	127.0.0.1:39308	admin	REQUEST	OPEN Clase1	0.59 ms	
+19:48:07.611	127.0.0.1:39308	admin	OK	Database 'Clase1' was opened in 0.83 ms.	1.21 ms	
+19:48:07.614	127.0.0.1:39308	admin	REQUEST	XQUERY for $l in //libro return $l/text()	0.64 ms	
+19:48:07.617	127.0.0.1:39308	admin	OK	Query "bin" executed in 1.65 ms.	2.31 ms	
+19:49:40.693	127.0.0.1:46052	admin	REQUEST	OPEN Clase1	0.43 ms	
+19:49:40.693	127.0.0.1:46052	admin	OK	Database 'Clase1' was opened in 0.59 ms.	0.79 ms	
+19:49:40.697	127.0.0.1:46052	admin	REQUEST	XQUERY for $l in //libro return $l/text()	0.84 ms	
+19:49:40.699	127.0.0.1:46052	admin	OK	Query "bin" executed in 1.37 ms.	1.86 ms	
+19:49:50.141	127.0.0.1:53598	admin	REQUEST	OPEN Clase1	0.45 ms	
+19:49:50.142	127.0.0.1:53598	admin	OK	Database 'Clase1' was opened in 0.55 ms.	0.78 ms	
+19:49:50.145	127.0.0.1:53598	admin	REQUEST	XQUERY for $l in //libro return $l	0.42 ms	
+19:49:50.148	127.0.0.1:53598	admin	OK	Query "bin" executed in 1.73 ms.	2.6 ms	
+19:59:28.800	127.0.0.1:49018	admin	REQUEST	OPEN Clase1	0.54 ms	
+19:59:28.801	127.0.0.1:49018	admin	OK	Database 'Clase1' was opened in 0.93 ms.	1.25 ms	
+19:59:28.805	127.0.0.1:49018	admin	REQUEST	XQUERY for $l in //libro return $l	0.38 ms	
+19:59:28.807	127.0.0.1:49018	admin	OK	Query "bin" executed in 1.21 ms.	1.73 ms	
+20:07:50.596	127.0.0.1:57802	admin	REQUEST	OPEN Clase1	0.49 ms	
+20:07:50.597	127.0.0.1:57802	admin	OK	Database 'Clase1' was opened in 0.55 ms.	0.76 ms	
+20:07:50.600	127.0.0.1:57802	admin	REQUEST	XQUERY for $l in //libro return $l	0.45 ms	
+20:07:50.602	127.0.0.1:57802	admin	OK	Query "bin" executed in 1.38 ms.	1.91 ms	
+20:07:50.606	127.0.0.1:57814	admin	REQUEST	ADD TO biblioteca.xml [...]	0.17 ms	
+20:07:50.606	127.0.0.1:57814	admin	ERROR	No database opened.	0.23 ms	
+20:07:50.616	127.0.0.1:57816	admin	REQUEST	OPEN Clase1	0.45 ms	
+20:07:50.617	127.0.0.1:57816	admin	OK	Database 'Clase1' was opened in 0.56 ms.	0.78 ms	
+20:07:50.618	127.0.0.1:57816	admin	REQUEST	XQUERY for $l in //libro return $l	0.23 ms	
+20:07:50.619	127.0.0.1:57816	admin	OK	Query "bin" executed in 1.24 ms.	1.62 ms	
+20:08:24.611	127.0.0.1:34124	admin	REQUEST	OPEN Clase1	0.46 ms	
+20:08:24.611	127.0.0.1:34124	admin	OK	Database 'Clase1' was opened in 0.62 ms.	0.9 ms	
+20:08:24.616	127.0.0.1:34124	admin	REQUEST	XQUERY for $l in //libro return $l	0.37 ms	
+20:08:24.618	127.0.0.1:34124	admin	OK	Query "bin" executed in 1.49 ms.	2.01 ms	
+20:08:24.620	127.0.0.1:34132	admin	REQUEST	OPEN Clase1	0.45 ms	
+20:08:24.621	127.0.0.1:34132	admin	OK	Database 'Clase1' was opened in 0.65 ms.	0.87 ms	
+20:08:24.622	127.0.0.1:34132	admin	REQUEST	ADD TO biblioteca.xml [...]	0.15 ms	
+20:08:24.625	127.0.0.1:34132	admin	ERROR	"biblioteca.xml.xml" (Line 1): El tipo de elemento "libro" debe finalizar por la etiqueta final coincidente "</libro>".	2.53 ms	
+20:08:24.635	127.0.0.1:34138	admin	REQUEST	OPEN Clase1	0.32 ms	
+20:08:24.635	127.0.0.1:34138	admin	OK	Database 'Clase1' was opened in 0.53 ms.	0.71 ms	
+20:08:24.636	127.0.0.1:34138	admin	REQUEST	XQUERY for $l in //libro return $l	0.21 ms	
+20:08:24.637	127.0.0.1:34138	admin	OK	Query "bin" executed in 1.21 ms.	1.61 ms	
+20:10:21.915	127.0.0.1:46876	admin	REQUEST	OPEN Clase1	0.34 ms	
+20:10:21.916	127.0.0.1:46876	admin	OK	Database 'Clase1' was opened in 0.49 ms.	0.71 ms	
+20:10:21.919	127.0.0.1:46876	admin	REQUEST	XQUERY for $l in //libro return $l	0.4 ms	
+20:10:21.921	127.0.0.1:46876	admin	OK	Query "bin" executed in 1.45 ms.	1.96 ms	
+20:10:21.923	127.0.0.1:46890	admin	REQUEST	OPEN Clase1	0.27 ms	
+20:10:21.924	127.0.0.1:46890	admin	OK	Database 'Clase1' was opened in 0.49 ms.	0.71 ms	
+20:10:21.925	127.0.0.1:46890	admin	REQUEST	ADD TO biblioteca.xml [...]	0.13 ms	
+20:10:21.931	127.0.0.1:46890	admin	OK	Resource(s) added in 4.89 ms.	5.98 ms	
+20:10:21.932	127.0.0.1:46900	admin	REQUEST	OPEN Clase1	0.27 ms	
+20:10:21.933	127.0.0.1:46900	admin	OK	Database 'Clase1' was opened in 0.37 ms.	0.57 ms	
+20:10:21.933	127.0.0.1:46900	admin	REQUEST	XQUERY for $l in //libro return $l	0.23 ms	
+20:10:21.935	127.0.0.1:46900	admin	OK	Query "bin" executed in 1.2 ms.	1.56 ms	
+20:11:09.547	127.0.0.1:60234	admin	REQUEST	OPEN Clase1	0.33 ms	
+20:11:09.547	127.0.0.1:60234	admin	OK	Database 'Clase1' was opened in 0.39 ms.	0.58 ms	
+20:11:09.550	127.0.0.1:60234	admin	REQUEST	XQUERY for $l in //libro return $l	0.3 ms	
+20:11:09.552	127.0.0.1:60234	admin	OK	Query "bin" executed in 1.39 ms.	1.84 ms	
+20:11:09.555	127.0.0.1:60238	admin	REQUEST	OPEN Clase1	0.3 ms	
+20:11:09.555	127.0.0.1:60238	admin	OK	Database 'Clase1' was opened in 0.39 ms.	0.58 ms	
+20:11:09.556	127.0.0.1:60238	admin	REQUEST	ADD TO biblioteca.xml [...]	0.07 ms	
+20:11:09.558	127.0.0.1:60238	admin	ERROR	"biblioteca.xml.xml" (Line 1): El tipo de elemento "libro" debe ir seguido de una de estas especificaciones de atributo: ">" o "/>".	1.54 ms	
+20:11:09.566	127.0.0.1:60250	admin	REQUEST	OPEN Clase1	0.37 ms	
+20:11:09.567	127.0.0.1:60250	admin	OK	Database 'Clase1' was opened in 0.36 ms.	0.54 ms	
+20:11:09.567	127.0.0.1:60250	admin	REQUEST	XQUERY for $l in //libro return $l	0.24 ms	
+20:11:09.569	127.0.0.1:60250	admin	OK	Query "bin" executed in 1.04 ms.	1.39 ms	
+20:11:49.188	127.0.0.1:38994	admin	REQUEST	OPEN Clase1	0.45 ms	
+20:11:49.189	127.0.0.1:38994	admin	OK	Database 'Clase1' was opened in 0.51 ms.	0.76 ms	
+20:11:49.192	127.0.0.1:38994	admin	REQUEST	XQUERY for $l in //libro return $l	0.35 ms	
+20:11:49.194	127.0.0.1:38994	admin	OK	Query "bin" executed in 1.15 ms.	1.64 ms	
+20:11:49.196	127.0.0.1:39004	admin	REQUEST	OPEN Clase1	0.32 ms	
+20:11:49.197	127.0.0.1:39004	admin	OK	Database 'Clase1' was opened in 0.54 ms.	0.79 ms	
+20:11:49.198	127.0.0.1:39004	admin	REQUEST	ADD TO biblioteca.xml [...]	0.24 ms	
+20:11:49.202	127.0.0.1:39004	admin	OK	Resource(s) added in 3.1 ms.	4.49 ms	
+20:11:49.204	127.0.0.1:39012	admin	REQUEST	OPEN Clase1	0.3 ms	
+20:11:49.205	127.0.0.1:39012	admin	OK	Database 'Clase1' was opened in 0.43 ms.	0.63 ms	
+20:11:49.205	127.0.0.1:39012	admin	REQUEST	XQUERY for $l in //libro return $l	0.28 ms	
+20:11:49.207	127.0.0.1:39012	admin	OK	Query "bin" executed in 1.05 ms.	1.47 ms	
+20:12:42.478	127.0.0.1:54518	admin	REQUEST	OPEN Clase1	0.37 ms	
+20:12:42.479	127.0.0.1:54518	admin	OK	Database 'Clase1' was opened in 0.45 ms.	0.67 ms	
+20:12:42.483	127.0.0.1:54518	admin	REQUEST	XQUERY for $l in //libro return $l	0.46 ms	
+20:12:42.485	127.0.0.1:54518	admin	OK	Query "bin" executed in 1.34 ms.	1.92 ms	
+20:12:42.487	127.0.0.1:34828	admin	REQUEST	OPEN Clase1	0.28 ms	
+20:12:42.488	127.0.0.1:34828	admin	OK	Database 'Clase1' was opened in 0.48 ms.	0.68 ms	
+20:12:42.488	127.0.0.1:34828	admin	REQUEST	ADD TO biblioteca.xml [...]	0.09 ms	
+20:12:42.491	127.0.0.1:34828	admin	OK	Resource(s) added in 1.87 ms.	2.74 ms	
+20:12:42.493	127.0.0.1:34832	admin	REQUEST	OPEN Clase1	0.32 ms	
+20:12:42.493	127.0.0.1:34832	admin	OK	Database 'Clase1' was opened in 0.37 ms.	0.58 ms	
+20:12:42.494	127.0.0.1:34832	admin	REQUEST	XQUERY for $l in //libro return $l	0.33 ms	
+20:12:42.496	127.0.0.1:34832	admin	OK	Query "bin" executed in 1.24 ms.	1.78 ms	
+20:22:55.231	127.0.0.1:48668	admin	REQUEST	OPEN Clase1	0.35 ms	
+20:22:55.232	127.0.0.1:48668	admin	OK	Database 'Clase1' was opened in 0.49 ms.	0.69 ms	
+20:22:55.236	127.0.0.1:48668	admin	REQUEST	XQUERY for $l in //libro return $l	0.5 ms	
+20:22:55.237	127.0.0.1:48668	admin	OK	Query "bin" executed in 1.15 ms.	1.61 ms	
+20:22:55.242	127.0.0.1:48682	admin	REQUEST	XQUERYinsert node<libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("biblioteca.xml")/biblioteca	2.43 ms	
+20:22:55.243	127.0.0.1:48682	admin	ERROR	Stopped at , 1/13: Unknown command: XQUERYinsert. Try 'help'.	0.14 ms	
+20:22:55.253	127.0.0.1:48698	admin	REQUEST	OPEN Clase1	0.34 ms	
+20:22:55.254	127.0.0.1:48698	admin	OK	Database 'Clase1' was opened in 0.44 ms.	0.64 ms	
+20:22:55.254	127.0.0.1:48698	admin	REQUEST	XQUERY for $l in //libro return $l	0.26 ms	
+20:22:55.256	127.0.0.1:48698	admin	OK	Query "bin" executed in 1.12 ms.	1.61 ms	
+20:24:02.029	127.0.0.1:50290	admin	REQUEST	OPEN Clase1	0.71 ms	
+20:24:02.030	127.0.0.1:50290	admin	OK	Database 'Clase1' was opened in 0.39 ms.	0.62 ms	
+20:24:02.033	127.0.0.1:50290	admin	REQUEST	XQUERY for $l in //libro return $l	0.41 ms	
+20:24:02.035	127.0.0.1:50290	admin	OK	Query "bin" executed in 1.12 ms.	1.64 ms	
+20:24:02.037	127.0.0.1:50300	admin	REQUEST	XQUERYinsert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("biblioteca.xml")/biblioteca	0.52 ms	
+20:24:02.037	127.0.0.1:50300	admin	ERROR	Stopped at , 1/13: Unknown command: XQUERYinsert. Try 'help'.	0.11 ms	
+20:24:02.045	127.0.0.1:50306	admin	REQUEST	OPEN Clase1	0.39 ms	
+20:24:02.046	127.0.0.1:50306	admin	OK	Database 'Clase1' was opened in 0.51 ms.	0.88 ms	
+20:24:02.047	127.0.0.1:50306	admin	REQUEST	XQUERY for $l in //libro return $l	0.29 ms	
+20:24:02.049	127.0.0.1:50306	admin	OK	Query "bin" executed in 1.1 ms.	1.5 ms	
+20:25:02.385	127.0.0.1:60414	admin	REQUEST	OPEN Clase1	0.39 ms	
+20:25:02.386	127.0.0.1:60414	admin	OK	Database 'Clase1' was opened in 0.42 ms.	0.64 ms	
+20:25:02.389	127.0.0.1:60414	admin	REQUEST	XQUERY for $l in //libro return $l	0.31 ms	
+20:25:02.391	127.0.0.1:60414	admin	OK	Query "bin" executed in 1.49 ms.	2.05 ms	
+20:25:02.393	127.0.0.1:60420	admin	REQUEST	XQUERY insert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("biblioteca.xml")/biblioteca	0.35 ms	
+20:25:02.402	127.0.0.1:60420	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 7/9: [FODC0002] Resource '/home/vespertino/Escritorio/basex/bin/biblioteca.xml' not found.	8.81 ms	
+20:25:02.411	127.0.0.1:60434	admin	REQUEST	OPEN Clase1	0.34 ms	
+20:25:02.412	127.0.0.1:60434	admin	OK	Database 'Clase1' was opened in 0.42 ms.	0.65 ms	
+20:25:02.413	127.0.0.1:60434	admin	REQUEST	XQUERY for $l in //libro return $l	0.54 ms	
+20:25:02.415	127.0.0.1:60434	admin	OK	Query "bin" executed in 1.53 ms.	2.06 ms	
+20:31:00.350	127.0.0.1:44128	admin	REQUEST	OPEN Clase1	0.47 ms	
+20:31:00.351	127.0.0.1:44128	admin	OK	Database 'Clase1' was opened in 0.63 ms.	1.0 ms	
+20:31:00.355	127.0.0.1:44128	admin	REQUEST	XQUERY for $l in //libro return $l	0.47 ms	
+20:31:00.356	127.0.0.1:44128	admin	OK	Query "bin" executed in 1.09 ms.	1.68 ms	
+20:31:00.359	127.0.0.1:44140	admin	REQUEST	XQUERY insert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("bibliotecaServer.xml")	0.52 ms	
+20:31:00.361	127.0.0.1:44140	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 7/9: [FODC0002] Resource '/home/vespertino/Escritorio/basex/bin/bibliotecaServer.xml' not found.	1.83 ms	
+20:31:00.369	127.0.0.1:44148	admin	REQUEST	OPEN Clase1	0.34 ms	
+20:31:00.370	127.0.0.1:44148	admin	OK	Database 'Clase1' was opened in 0.41 ms.	0.71 ms	
+20:31:00.371	127.0.0.1:44148	admin	REQUEST	XQUERY for $l in //libro return $l	0.49 ms	
+20:31:00.372	127.0.0.1:44148	admin	OK	Query "bin" executed in 1.0 ms.	1.52 ms	
+20:33:12.060	127.0.0.1:50346	admin	REQUEST	HELP	0.28 ms	
+20:33:12.061	127.0.0.1:50346	admin	OK		0.26 ms	
+20:33:37.164	127.0.0.1:50346	admin	REQUEST	CHECK Clase1	0.42 ms	
+20:33:37.165	127.0.0.1:50346	admin	OK	Database 'Clase1' was opened in 0.38 ms.	0.64 ms	
+20:33:42.028	127.0.0.1:50346	admin	REQUEST	LIST	0.35 ms	
+20:33:42.029	127.0.0.1:50346	admin	OK		0.99 ms	
+20:33:56.020	127.0.0.1:50346	admin	REQUEST	CHECK Clase1	0.34 ms	
+20:33:56.020	127.0.0.1:50346	admin	OK	Database 'Clase1' was opened in 0.46 ms.	0.69 ms	
+20:33:59.884	127.0.0.1:50346	admin	REQUEST	LIST	0.31 ms	
+20:33:59.885	127.0.0.1:50346	admin	OK		1.01 ms	
+20:34:12.636	127.0.0.1:50346	admin	REQUEST	OPEN Clase1	0.29 ms	
+20:34:12.636	127.0.0.1:50346	admin	OK	Database 'Clase1' was opened in 0.03 ms.	0.19 ms	
+20:34:16.499	127.0.0.1:50346	admin	REQUEST	LIST	0.3 ms	
+20:34:16.500	127.0.0.1:50346	admin	OK		0.91 ms	
+20:35:08.959	127.0.0.1:47736	admin	REQUEST	OPEN fichero.xml	0.34 ms	
+20:35:08.959	127.0.0.1:47736	admin	ERROR	Database 'fichero.xml' was not found.	0.41 ms	
+20:35:08.966	127.0.0.1:47740	admin	REQUEST	XQUERY insert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("biblioteca.xml")	0.3 ms	
+20:35:08.967	127.0.0.1:47740	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 7/9: [FODC0002] Resource '/home/vespertino/Escritorio/basex/bin/biblioteca.xml' not found.	1.22 ms	
+20:35:08.970	127.0.0.1:47744	admin	REQUEST	OPEN fichero.xml	0.31 ms	
+20:35:08.970	127.0.0.1:47744	admin	ERROR	Database 'fichero.xml' was not found.	0.37 ms	
+20:35:23.264	127.0.0.1:40130	admin	REQUEST	OPEN Clase1	0.38 ms	
+20:35:23.265	127.0.0.1:40130	admin	OK	Database 'Clase1' was opened in 0.05 ms.	0.27 ms	
+20:35:23.268	127.0.0.1:40130	admin	REQUEST	XQUERY for $l in //libro return $l	0.28 ms	
+20:35:23.269	127.0.0.1:40130	admin	OK	Query "bin" executed in 0.97 ms.	1.41 ms	
+20:35:23.272	127.0.0.1:40136	admin	REQUEST	XQUERY insert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into doc("biblioteca.xml")	0.41 ms	
+20:35:23.273	127.0.0.1:40136	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 7/9: [FODC0002] Resource '/home/vespertino/Escritorio/basex/bin/biblioteca.xml' not found.	1.48 ms	
+20:35:23.283	127.0.0.1:40144	admin	REQUEST	OPEN Clase1	0.28 ms	
+20:35:23.283	127.0.0.1:40144	admin	OK	Database 'Clase1' was opened in 0.04 ms.	0.19 ms	
+20:35:23.284	127.0.0.1:40144	admin	REQUEST	XQUERY for $l in //libro return $l	0.2 ms	
+20:35:23.285	127.0.0.1:40144	admin	OK	Query "bin" executed in 0.82 ms.	1.12 ms	
+20:35:36.987	127.0.0.1:50346	admin	REQUEST	LIST	0.27 ms	
+20:35:36.987	127.0.0.1:50346	admin	OK		0.88 ms	
+20:35:43.387	127.0.0.1:50346	admin	REQUEST	HELP	0.3 ms	
+20:35:43.387	127.0.0.1:50346	admin	OK		0.22 ms	
+20:36:11.069	127.0.0.1:35762	admin	REQUEST	HELP	0.32 ms	
+20:36:11.069	127.0.0.1:35762	admin	OK		0.2 ms	
+20:36:30.406	127.0.0.1:35762	admin	REQUEST	OPEN Clase1	0.31 ms	
+20:36:30.407	127.0.0.1:35762	admin	OK	Database 'Clase1' was opened in 0.61 ms.	0.81 ms	
+20:37:04.090	127.0.0.1:35762	admin	REQUEST	LIST	0.27 ms	
+20:37:04.091	127.0.0.1:35762	admin	OK		0.94 ms	
+20:37:08.146	127.0.0.1:35762	admin	REQUEST	LIST Clase1	0.36 ms	
+20:37:08.153	127.0.0.1:35762	admin	OK		6.6 ms	
+20:38:34.628	127.0.0.1:48960	admin	REQUEST	OPEN Clase1	0.33 ms	
+20:38:34.628	127.0.0.1:48960	admin	OK	Database 'Clase1' was opened in 0.03 ms.	0.24 ms	
+20:38:34.631	127.0.0.1:48960	admin	REQUEST	XQUERY for $l in //libro return $l	0.31 ms	
+20:38:34.633	127.0.0.1:48960	admin	OK	Query "bin" executed in 0.98 ms.	1.42 ms	
+20:38:34.635	127.0.0.1:48962	admin	REQUEST	XQUERY insert node <libro id="L009" categoria="ficcion"> <titulo idioma="es">Angel in wonderland </titulo> <autor>Gabriel García Márquez </autor> <anio>1982</anio> <precio moneda="EUR">18.90</precio> </libro> into /biblioteca	0.39 ms	
+20:38:34.636	127.0.0.1:48962	admin	ERROR	Stopped at /home/vespertino/Escritorio/basex/bin/, 7/7: [XPDY0002] .: Context value is undefined.	1.67 ms	
+20:38:34.644	127.0.0.1:48976	admin	REQUEST	OPEN Clase1	0.32 ms	
+20:38:34.644	127.0.0.1:48976	admin	OK	Database 'Clase1' was opened in 0.03 ms.	0.2 ms	
+20:38:34.645	127.0.0.1:48976	admin	REQUEST	XQUERY for $l in //libro return $l	0.24 ms	
+20:38:34.646	127.0.0.1:48976	admin	OK	Query "bin" executed in 0.87 ms.	1.28 ms	
+20:39:16.025	127.0.0.1:35762	admin	REQUEST	LIST biblioteca.xml	0.28 ms	
+20:39:16.025	127.0.0.1:35762	admin	ERROR	Database 'biblioteca.xml' was not found.	0.26 ms	
+20:45:40.608	SERVER	admin	OK	Server was stopped (port: 1984).		

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <componente tipo="procesador" stock="true">
+        <fabricante>Intel</fabricante>
+        <modelo>Core i7 12700K</modelo>
+        <especificaciones>
+            <nucleos>12</nucleos>
+            <frecuencia unidad="GHz">3.6</frecuencia>
+        </especificaciones>
+        <precio>380.00</precio>
+    </componente>
+
+    <componente tipo="procesador" stock="false">
+        <fabricante>AMD</fabricante>
+        <modelo>Ryzen 9 5900X</modelo>
+        <especificaciones>
+            <nucleos>12</nucleos>
+            <frecuencia unidad="GHz">3.7</frecuencia>
+        </especificaciones>
+        <precio>420.00</precio>
+    </componente>
+
+    <componente tipo="grafica" stock="true">
+        <fabricante>NVIDIA</fabricante>
+        <modelo>RTX 3060</modelo>
+        <especificaciones>
+            <memoria unidad="GB">12</memoria>
+        </especificaciones>
+        <precio>350.00</precio>
+    </componente>
+</catalogo>

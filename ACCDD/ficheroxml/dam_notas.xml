@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto>
+    <curso nombre="2DAM">
+        <tutor>Juan Profesor</tutor>
+        <alumnos>
+            <alumno expediente="101">
+                <nombre>Ana García</nombre>
+                <asignaturas>
+                    <asignatura clave="AD">
+                        <nombre>Acceso a Datos</nombre>
+                        <nota>9</nota>
+                    </asignatura>
+                    <asignatura clave="DI">
+                        <nombre>Desarrollo de Interfaces</nombre>
+                        <nota>7</nota>
+                    </asignatura>
+                </asignaturas>
+            </alumno>
+            <alumno expediente="102">
+                <nombre>Pedro López</nombre>
+                <asignaturas>
+                    <asignatura clave="AD">
+                        <nombre>Acceso a Datos</nombre>
+                        <nota>4</nota>
+                    </asignatura>
+                </asignaturas>
+            </alumno>
+        </alumnos>
+    </curso>
+</instituto>

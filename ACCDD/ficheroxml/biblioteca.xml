@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro id="L001" categoria="ficcion">
+        <titulo idioma="es">El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <anio>1605</anio>
+        <precio moneda="EUR">20.50</precio>
+    </libro>
+    <libro id="L002" categoria="tecnologia">
+        <titulo idioma="en">Clean Code</titulo>
+        <autor>Robert C. Martin</autor>
+        <anio>2008</anio>
+        <precio moneda="USD">35.00</precio>
+    </libro>
+    <libro id="L003" categoria="ficcion">
+        <titulo idioma="es">Cien años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <anio>1967</anio>
+        <precio moneda="EUR">18.90</precio>
+    </libro>
+</biblioteca>

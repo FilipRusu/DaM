@@ -1,0 +1,16 @@
+PASSWORD admin
+quit
+--help
+help
+LIST
+OPEN Clase1
+LIST
+list
+ls
+help
+exit
+help
+OPEN Clase1
+LIST
+LIST Clase1
+LIST biblioteca.xml
