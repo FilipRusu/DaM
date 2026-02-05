@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/vespertino/Escritorio/basex/BaseX.jar"/>
+	<classpathentry kind="lib" path="/home/vespertino/Escritorio/DAM/Dam/ACCDD/basex/BaseX.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
